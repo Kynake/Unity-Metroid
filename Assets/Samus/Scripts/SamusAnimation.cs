@@ -87,7 +87,7 @@ public class SamusAnimation : MonoBehaviour {
   private KeyCode aimKey   = KeyCode.UpArrow;
   private KeyCode shootKey = KeyCode.LeftShift;
 
-  void Start() {
+  void Awake() {
     animator = GetComponent<Animator>();
 
     if(animator == null) {
