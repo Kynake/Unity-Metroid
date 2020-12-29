@@ -176,6 +176,8 @@ GameObject:
   - component: {fileID: 6358924235428637853}
   - component: {fileID: 2326562148580219572}
   - component: {fileID: 1686648513319867767}
+  - component: {fileID: 8699384406466816757}
+  - component: {fileID: 1179489496239489342}
   m_Layer: 0
   m_Name: Samus
   m_TagString: Untagged
@@ -265,3 +267,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8699384406466816757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562398292872847884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d137948960a9a44d874261fb25eb9c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1179489496239489342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562398292872847884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58cf32a97247eea44914ccbd0ab33802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

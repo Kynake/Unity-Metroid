@@ -12,81 +12,6 @@ public class SamusAnimation : MonoBehaviour {
 
   private Animator animator = null;
 
-  private bool _isRunning = false;
-  public  bool isRunning {
-    get { return _isRunning; }
-    set {
-      if(_isRunning != value) {
-        _isRunning = value;
-        animator.SetBool("isRunning", value);
-      }
-    }
-  }
-
-  private bool _isJumping = false;
-  public bool isJumping {
-    get { return _isJumping; }
-    set {
-      if(_isJumping != value) {
-        _isJumping = value;
-        animator.SetBool("isJumping", value);
-      }
-    }
-  }
-
-  private bool _isGrounded = true;
-  public bool isGrounded {
-    get { return _isGrounded; }
-    set {
-      if(_isGrounded != value) {
-        _isGrounded = value;
-        animator.SetBool("isGrounded", value);
-      }
-    }
-  }
-
-  private bool _isAiming = false;
-  public bool isAiming {
-    get { return _isAiming; }
-    set {
-      if(_isAiming != value) {
-        _isAiming = value;
-        animator.SetBool("isAiming", value);
-        animator.SetLayerWeight((int) Layers.Aim, value? 1f : 0f);
-        animator.SetLayerWeight((int) Layers.Aim_Shoot, value && isShooting? 1f : 0f );
-      }
-    }
-  }
-
-  private bool _isShooting = false;
-  public bool isShooting {
-    get { return _isShooting; }
-    set {
-      if(_isShooting != value) {
-        _isShooting = value;
-        animator.SetBool("isShooting", value);
-        animator.SetLayerWeight((int) Layers.Shoot, value? 1f : 0f);
-        animator.SetLayerWeight((int) Layers.Aim_Shoot, value && isAiming? 1f : 0f );
-      }
-    }
-  }
-
-  private bool _isMorphball = false;
-  public bool isMorphball {
-    get { return _isMorphball; }
-    set {
-      if(_isMorphball != value) {
-        _isMorphball = value;
-        animator.SetBool("isMorphball", value);
-      }
-    }
-  }
-
-  private KeyCode runKey   = KeyCode.RightArrow;
-  // private KeyCode jumpKey  = KeyCode.Space;
-  private KeyCode aimKey   = KeyCode.UpArrow;
-  private KeyCode shootKey = KeyCode.LeftShift;
-
   void Awake() {
     animator = GetComponent<Animator>();
 
@@ -94,18 +19,62 @@ public class SamusAnimation : MonoBehaviour {
       Debug.LogError("Samus Animator not found!");
       return;
     }
-
-
   }
 
-  void Update() {
-    isRunning  = Input.GetKey(runKey);
-    // isJumping  = Input.GetKey(jumpKey);
-    isAiming   = Input.GetKey(aimKey);
-    isShooting = Input.GetKey(shootKey);
+  void OnEnable() {
+    SamusState.instance.isRunning.OnChange   += updateAnimatorRunning;
+    SamusState.instance.isAiming.OnChange    += updateAnimatorAiming;
+    SamusState.instance.isShooting.OnChange  += updateAnimatorShooting;
+    SamusState.instance.isMorphball.OnChange += updateAnimatorMorphball;
+
+    SamusState.instance.jumpState.OnChange += updateAnimatorJumpState;
   }
 
-  public void startFalling() {
-    isJumping = false;
+  void OnDisable() {
+    SamusState.instance.isRunning.OnChange   -= updateAnimatorRunning;
+    SamusState.instance.isAiming.OnChange    -= updateAnimatorAiming;
+    SamusState.instance.isShooting.OnChange  -= updateAnimatorShooting;
+    SamusState.instance.isMorphball.OnChange -= updateAnimatorMorphball;
+
+    SamusState.instance.jumpState.OnChange -= updateAnimatorJumpState;
+  }
+
+  private void updateAnimatorRunning(bool value) {
+    animator.SetBool("isRunning", value);
+  }
+
+  private void updateAnimatorAiming(bool value) {
+    animator.SetBool("isAiming", value);
+    animator.SetLayerWeight((int) Layers.Aim, value? 1f : 0f);
+    animator.SetLayerWeight((int) Layers.Aim_Shoot, value && SamusState.instance.isShooting.value? 1f : 0f);
+  }
+
+  private void updateAnimatorShooting(bool value) {
+    animator.SetBool("isShooting", value);
+    animator.SetLayerWeight((int) Layers.Shoot, value? 1f : 0f);
+    animator.SetLayerWeight((int) Layers.Aim_Shoot, value && SamusState.instance.isAiming.value? 1f : 0f);
+  }
+
+  private void updateAnimatorMorphball(bool value) {
+    animator.SetBool("isMorphball", value);
+  }
+
+  private void updateAnimatorJumpState(JumpState value) {
+    switch(value) {
+      case JumpState.Grounded:
+        animator.SetBool("isGrounded", true);
+        animator.SetBool("isJumping", false);
+        break;
+
+      case JumpState.Jumping:
+        animator.SetBool("isGrounded", false);
+        animator.SetBool("isGrounded", true);
+        break;
+
+      case JumpState.Falling:
+        animator.SetBool("isGrounded", false);
+        animator.SetBool("isGrounded", false);
+        break;
+    }
   }
 }
