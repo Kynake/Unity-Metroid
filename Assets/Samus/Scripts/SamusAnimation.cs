@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -60,6 +60,10 @@ public class SamusAnimation : MonoBehaviour {
   }
 
   private void updateAnimatorJumpState(JumpState value) {
+    if(SamusState.instance.jumpState.value == value) {
+      return;
+    }
+
     switch(value) {
       case JumpState.Grounded:
         animator.SetBool("isGrounded", true);
