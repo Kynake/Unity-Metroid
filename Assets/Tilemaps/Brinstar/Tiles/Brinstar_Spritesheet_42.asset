@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Brinstar_Spritesheet_42
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -4608421022621252387, guid: 88edf5a8d6261e64d90382494fe10066, type: 3}
+  m_Sprite: {fileID: -4608421022621252387, guid: d8899952f7a4b5a4996476b4ddff69e7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

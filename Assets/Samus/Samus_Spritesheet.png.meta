@@ -1,0 +1,916 @@
+fileFormatVersion: 2
+guid: 5c8bacb95ff0a4c4aae2071b4ac4909d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -662699025716212752
+    second: Samus_Sprite_Top_Stand
+  - first:
+      213: -3249548906219373548
+    second: Samus_Sprite_Top_Run_1
+  - first:
+      213: -1703893060875292567
+    second: Samus_Sprite_Top_Run_2
+  - first:
+      213: -1116404590350804415
+    second: Samus_Sprite_Top_Run_3
+  - first:
+      213: -6332995666647419303
+    second: Samus_Sprite_Bottom_Stand
+  - first:
+      213: -4243588866327664738
+    second: Samus_Sprite_Bottom_Run_1
+  - first:
+      213: -6323520286434205116
+    second: Samus_Sprite_Bottom_Run_2
+  - first:
+      213: 1175478435713692903
+    second: Samus_Sprite_Bottom_Run_3
+  - first:
+      213: 4354958089916290706
+    second: Samus_Sprite_Top_Shoot
+  - first:
+      213: 5302870375707130411
+    second: Samus_Sprite_Top_Run_Shoot
+  - first:
+      213: -6540199101111042910
+    second: Samus_Sprite_Top_Aim
+  - first:
+      213: -4745947147539737120
+    second: Samus_Sprite_Top_Aim_Shoot
+  - first:
+      213: 133244782415474574
+    second: Samus_Sprite_Bottom_Jump
+  - first:
+      213: 4519716388693395180
+    second: Samus_Sprite_Top_Look
+  - first:
+      213: -3518894404117856378
+    second: Samus_Sprite_Bottom_Look
+  - first:
+      213: -7198673260566034517
+    second: Samus_Sprite_Top_Spin_1
+  - first:
+      213: -1235085706289985461
+    second: Samus_Sprite_Bottom_Morphball_1
+  - first:
+      213: 8482745723130352033
+    second: Samus_Sprite_Bottom_Morphball_2
+  - first:
+      213: 1181668917046307235
+    second: Samus_Sprite_Bottom_Spin_1
+  - first:
+      213: 7966151117860781121
+    second: Samus_Sprite_Bottom_Morphball_3
+  - first:
+      213: -7705202536578944812
+    second: Samus_Sprite_Bottom_Morphball_4
+  - first:
+      213: 1834607228538045663
+    second: Samus_Sprite_Death_Top_Left
+  - first:
+      213: 5285077641440005158
+    second: Samus_Sprite_Death_Top_Right
+  - first:
+      213: -6828835460229646423
+    second: Samus_Sprite_Death_Top_Left
+  - first:
+      213: -3429759289350035897
+    second: Samus_Sprite_Death_Middle_Left
+  - first:
+      213: -4023454179018415375
+    second: Samus_Sprite_Death_Middle_Right
+  - first:
+      213: -3815142517924872931
+    second: Samus_Sprite_Death_Bottom_Left
+  - first:
+      213: 5856475818463554750
+    second: Samus_Sprite_Death_Bottom_Right
+  - first:
+      213: -6828835460229646423
+    second: Samus_Sprite_Top_Spin_2
+  - first:
+      213: -7662766150418346886
+    second: Samus_Sprite_Bottom_Spin_2
+  - first:
+      213: -5097602144468906061
+    second: Samus_Sprite_Top_Spin_3
+  - first:
+      213: -765978229217368092
+    second: Samus_Sprite_Bottom_Spin_3
+  - first:
+      213: -2124619243468830690
+    second: Samus_Sprite_Top_Spin_4
+  - first:
+      213: 8171259908717086291
+    second: Samus_Sprite_Bottom_Spin_4
+  - first:
+      213: -7450359995017073345
+    second: Samus_Sprite_Death_Top_Left
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Stand
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 145
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fb003b4fbe9dc6f0800000000000000
+      internalID: -662699025716212752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Run_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 145
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cf8849c7847e2d0800000000000000
+      internalID: -3249548906219373548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Run_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 145
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960764be94e8a58e0800000000000000
+      internalID: -1703893060875292567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Run_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 145
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a5686a0fbb180f0800000000000000
+      internalID: -1116404590350804415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Stand
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 121
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956746daefdac18a0800000000000000
+      internalID: -6332995666647419303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Run_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 121
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97acb9d86ebb15c0800000000000000
+      internalID: -4243588866327664738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Run_2
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 121
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442ec1d8dc75e38a0800000000000000
+      internalID: -6323520286434205116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Run_3
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 121
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e4b8d9c863205010800000000000000
+      internalID: 1175478435713692903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Shoot
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 97
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2969c292f4bef6c30800000000000000
+      internalID: 4354958089916290706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Run_Shoot
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 97
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a37f9c284979940800000000000000
+      internalID: 5302870375707130411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Aim
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 97
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac72f9a19b8c35a0800000000000000
+      internalID: -6540199101111042910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Aim_Shoot
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 97
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e59d14e632032eb0800000000000000
+      internalID: -4745947147539737120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Jump
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 73
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f6c047c6169d100800000000000000
+      internalID: 133244782415474574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Look
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 73
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce6c499eb1249be30800000000000000
+      internalID: 4519716388693395180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Look
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 73
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ff170fe206a2fc0800000000000000
+      internalID: -3518894404117856378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Spin_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 49
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7cbd94fcc291c90800000000000000
+      internalID: -7198673260566034517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Morphball_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b484c6908181cdee0800000000000000
+      internalID: -1235085706289985461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Morphball_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1162baa44c8b570800000000000000
+      internalID: 8482745723130352033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Spin_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 25
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a96aaa8e91266010800000000000000
+      internalID: 1181668917046307235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Morphball_3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c3c273c347d8e60800000000000000
+      internalID: 7966151117860781121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Morphball_4
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0f5cced1f911590800000000000000
+      internalID: -7705202536578944812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Spin_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 49
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7bb63645a1b31a0800000000000000
+      internalID: -6828835460229646423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Death_Top_Right
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 87
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c04640d1e585940800000000000000
+      internalID: 5285077641440005158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Death_Middle_Left
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 77
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746e135191c0760d0800000000000000
+      internalID: -3429759289350035897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Death_Middle_Right
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 77
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2eb89cdb1d928c0800000000000000
+      internalID: -4023454179018415375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Death_Bottom_Left
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 87
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d399be714ed0bc0800000000000000
+      internalID: -3815142517924872931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Death_Bottom_Right
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 77
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc6f2b5ab1664150800000000000000
+      internalID: 5856475818463554750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Spin_2
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 25
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7c4d6709c268a590800000000000000
+      internalID: -7662766150418346886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Spin_3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 49
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf49ac9bdda149b0800000000000000
+      internalID: -5097602144468906061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Spin_3
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 25
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7e0dddbd2be55f0800000000000000
+      internalID: -765978229217368092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Top_Spin_4
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 49
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18c4160e06d382e0800000000000000
+      internalID: -2124619243468830690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Bottom_Spin_4
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 25
+        width: 28
+        height: 22
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35609720895266170800000000000000
+      internalID: 8171259908717086291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Samus_Sprite_Death_Top_Left
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 87
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3de938ee010b9890800000000000000
+      internalID: -7450359995017073345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

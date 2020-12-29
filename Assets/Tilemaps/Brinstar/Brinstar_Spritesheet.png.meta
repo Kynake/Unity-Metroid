@@ -1,583 +1,7 @@
 fileFormatVersion: 2
-guid: 88edf5a8d6261e64d90382494fe10066
+guid: d8899952f7a4b5a4996476b4ddff69e7
 TextureImporter:
   internalIDToNameTable:
-  - first:
-      213: 681553110486768037
-    second: tilemap-area-1_0
-  - first:
-      213: -6315782608459646521
-    second: tilemap-area-1_1
-  - first:
-      213: -540647023880553265
-    second: tilemap-area-1_2
-  - first:
-      213: -8334513603966805755
-    second: tilemap-area-1_3
-  - first:
-      213: -3882007755601993535
-    second: tilemap-area-1_4
-  - first:
-      213: 7639679267427737800
-    second: tilemap-area-1_5
-  - first:
-      213: 359368336218378548
-    second: tilemap-area-1_6
-  - first:
-      213: -4785032636011013401
-    second: tilemap-area-1_7
-  - first:
-      213: -152308797241608286
-    second: tilemap-area-1_8
-  - first:
-      213: -5850195046714215578
-    second: tilemap-area-1_9
-  - first:
-      213: 3410624915205412225
-    second: tilemap-area-1_10
-  - first:
-      213: -4386510093961976331
-    second: tilemap-area-1_11
-  - first:
-      213: 293625638205804470
-    second: tilemap-area-1_12
-  - first:
-      213: 5647334780114774915
-    second: tilemap-area-1_13
-  - first:
-      213: 7366959470331632061
-    second: tilemap-area-1_14
-  - first:
-      213: -4696683819644322288
-    second: tilemap-area-1_15
-  - first:
-      213: 4300820090896711965
-    second: tilemap-area-1_16
-  - first:
-      213: -6137593418689293567
-    second: tilemap-area-1_17
-  - first:
-      213: 8066506862868310031
-    second: tilemap-area-1_18
-  - first:
-      213: -4843303060993316341
-    second: tilemap-area-1_19
-  - first:
-      213: -2188787573166652398
-    second: tilemap-area-1_20
-  - first:
-      213: 931560596584972607
-    second: tilemap-area-1_21
-  - first:
-      213: -3564403631161720483
-    second: tilemap-area-1_22
-  - first:
-      213: 6978757164424150709
-    second: tilemap-area-1_23
-  - first:
-      213: 852940758060671815
-    second: tilemap-area-1_24
-  - first:
-      213: 3728802624505681019
-    second: tilemap-area-1_25
-  - first:
-      213: 1033569935632297504
-    second: tilemap-area-1_26
-  - first:
-      213: -2890252890755284619
-    second: tilemap-area-1_27
-  - first:
-      213: 978168727130387515
-    second: tilemap-area-1_28
-  - first:
-      213: 4225836504002799741
-    second: tilemap-area-1_29
-  - first:
-      213: -141494820595570963
-    second: tilemap-area-1_30
-  - first:
-      213: 6379135397402616910
-    second: tilemap-area-1_31
-  - first:
-      213: 3146198716242430983
-    second: tilemap-area-1_32
-  - first:
-      213: 7718187300249873110
-    second: tilemap-area-1_33
-  - first:
-      213: 8710841210240996649
-    second: tilemap-area-1_34
-  - first:
-      213: 286437004426940194
-    second: tilemap-area-1_35
-  - first:
-      213: -8666821675118071932
-    second: tilemap-area-1_36
-  - first:
-      213: -8474620579711782832
-    second: tilemap-area-1_37
-  - first:
-      213: 8787897487196426280
-    second: tilemap-area-1_38
-  - first:
-      213: 2147873767820863034
-    second: tilemap-area-1_39
-  - first:
-      213: 6539579784896535195
-    second: tilemap-area-1_40
-  - first:
-      213: -5225492099093393240
-    second: tilemap-area-1_41
-  - first:
-      213: 2002670380169662125
-    second: tilemap-area-1_42
-  - first:
-      213: -6600797743433602411
-    second: tilemap-area-1_43
-  - first:
-      213: -3211833800603990836
-    second: tilemap-area-1_44
-  - first:
-      213: -8198997890369680013
-    second: tilemap-area-1_45
-  - first:
-      213: 1876900063769304399
-    second: tilemap-area-1_46
-  - first:
-      213: -3031177730742450837
-    second: tilemap-area-1_47
-  - first:
-      213: 8137657881400121806
-    second: tilemap-area-1_48
-  - first:
-      213: 8205502878028089618
-    second: tilemap-area-1_49
-  - first:
-      213: 395938762541088691
-    second: tilemap-area-1_50
-  - first:
-      213: -6365443212188103328
-    second: tilemap-area-1_51
-  - first:
-      213: 3565383751471923660
-    second: tilemap-area-1_52
-  - first:
-      213: -2666929516671787377
-    second: tilemap-area-1_53
-  - first:
-      213: 2705647737612183928
-    second: tilemap-area-1_54
-  - first:
-      213: -6840736635051176638
-    second: tilemap-area-1_55
-  - first:
-      213: -5145525520903259963
-    second: tilemap-area-1_56
-  - first:
-      213: 1066970017596135333
-    second: tilemap-area-1_57
-  - first:
-      213: -6109551401763483689
-    second: tilemap-area-1_58
-  - first:
-      213: 8189897658734209205
-    second: tilemap-area-1_59
-  - first:
-      213: -7688684479787164415
-    second: tilemap-area-1_60
-  - first:
-      213: 5422361411250908420
-    second: tilemap-area-1_61
-  - first:
-      213: -6153221502517209227
-    second: tilemap-area-1_62
-  - first:
-      213: 78686451356822420
-    second: tilemap-area-1_63
-  - first:
-      213: 2920033771430604283
-    second: area_1_tilemap_texture_0
-  - first:
-      213: 2290991187169339725
-    second: area_1_tilemap_texture_1
-  - first:
-      213: -5627736421152433558
-    second: area_1_tilemap_texture_2
-  - first:
-      213: -5604194475444947699
-    second: area_1_tilemap_texture_3
-  - first:
-      213: -3282334176011896160
-    second: area_1_tilemap_texture_4
-  - first:
-      213: 6037940936229932691
-    second: area_1_tilemap_texture_5
-  - first:
-      213: 2895782009671037531
-    second: area_1_tilemap_texture_6
-  - first:
-      213: -2938352151387566275
-    second: area_1_tilemap_texture_7
-  - first:
-      213: 2739103672445355613
-    second: area_1_tilemap_texture_8
-  - first:
-      213: -2518391252629211868
-    second: area_1_tilemap_texture_9
-  - first:
-      213: -1992943132950965186
-    second: area_1_tilemap_texture_10
-  - first:
-      213: 766247004169154070
-    second: area_1_tilemap_texture_11
-  - first:
-      213: 1339527367920984543
-    second: area_1_tilemap_texture_12
-  - first:
-      213: 2600163181584901934
-    second: area_1_tilemap_texture_13
-  - first:
-      213: 1546294201430522875
-    second: area_1_tilemap_texture_14
-  - first:
-      213: -8316253250753330745
-    second: area_1_tilemap_texture_15
-  - first:
-      213: 3767818246727912564
-    second: area_1_tilemap_texture_16
-  - first:
-      213: 7726730682712423685
-    second: area_1_tilemap_texture_17
-  - first:
-      213: -2233814158170699945
-    second: area_1_tilemap_texture_18
-  - first:
-      213: 7277503519217609536
-    second: area_1_tilemap_texture_19
-  - first:
-      213: -6133102527052883229
-    second: area_1_tilemap_texture_20
-  - first:
-      213: -6311784028680519150
-    second: area_1_tilemap_texture_21
-  - first:
-      213: 9148224492298107396
-    second: area_1_tilemap_texture_22
-  - first:
-      213: 2491034456829736910
-    second: area_1_tilemap_texture_23
-  - first:
-      213: -3076787848137708074
-    second: area_1_tilemap_texture_24
-  - first:
-      213: -2570283943918138634
-    second: area_1_tilemap_texture_25
-  - first:
-      213: -3880410893626718377
-    second: area_1_tilemap_texture_26
-  - first:
-      213: 1770805804972840010
-    second: area_1_tilemap_texture_27
-  - first:
-      213: -2292893701039378234
-    second: area_1_tilemap_texture_28
-  - first:
-      213: 3755125410938514041
-    second: area_1_tilemap_texture_29
-  - first:
-      213: 7089889755703341044
-    second: area_1_tilemap_texture_30
-  - first:
-      213: 6035135844855740640
-    second: area_1_tilemap_texture_31
-  - first:
-      213: -3932368442636865429
-    second: area_1_tilemap_texture_32
-  - first:
-      213: 3123035360283367886
-    second: area_1_tilemap_texture_33
-  - first:
-      213: -5186945449750547182
-    second: area_1_tilemap_texture_34
-  - first:
-      213: 1703946489319708804
-    second: area_1_tilemap_texture_35
-  - first:
-      213: -9067049209206570257
-    second: area_1_tilemap_texture_36
-  - first:
-      213: -3663419729347430772
-    second: area_1_tilemap_texture_37
-  - first:
-      213: 8879782692216782469
-    second: area_1_tilemap_texture_38
-  - first:
-      213: -5217324196768546903
-    second: area_1_tilemap_texture_39
-  - first:
-      213: 604863486871720086
-    second: area_1_tilemap_texture_40
-  - first:
-      213: 1955865762225337692
-    second: area_1_tilemap_texture_41
-  - first:
-      213: -5170146379251286543
-    second: area_1_tilemap_texture_42
-  - first:
-      213: 5214952409313549827
-    second: area_1_tilemap_texture_43
-  - first:
-      213: -7739800970177089467
-    second: area_1_tilemap_texture_44
-  - first:
-      213: 8691784299889657511
-    second: area_1_tilemap_texture_45
-  - first:
-      213: -3527231112825050089
-    second: area_1_tilemap_texture_46
-  - first:
-      213: -7855233289352675926
-    second: area_1_tilemap_texture_47
-  - first:
-      213: 3959233731608747377
-    second: area_1_tilemap_texture_48
-  - first:
-      213: -8035021191003811479
-    second: area_1_tilemap_texture_49
-  - first:
-      213: 5606249781996012387
-    second: area_1_tilemap_texture_50
-  - first:
-      213: 3879030315169169994
-    second: area_1_tilemap_texture_51
-  - first:
-      213: -7443704742636569919
-    second: area_1_tilemap_texture_52
-  - first:
-      213: 458987322949965153
-    second: area_1_tilemap_texture_53
-  - first:
-      213: 6040816985377019186
-    second: area_1_tilemap_texture_54
-  - first:
-      213: -2189665045042546070
-    second: area_1_tilemap_texture_55
-  - first:
-      213: 3781773352785382495
-    second: area_1_tilemap_texture_56
-  - first:
-      213: 494159335156960550
-    second: area_1_tilemap_texture_57
-  - first:
-      213: -7423654310264933589
-    second: area_1_tilemap_texture_58
-  - first:
-      213: 5103379553213482198
-    second: area_1_tilemap_texture_59
-  - first:
-      213: 5720950072025028593
-    second: area_1_tilemap_texture_60
-  - first:
-      213: 7687423267801188726
-    second: area_1_tilemap_texture_61
-  - first:
-      213: 6582760111769997576
-    second: area_1_tilemap_texture_62
-  - first:
-      213: -3098123912303017900
-    second: area_1_tilemap_texture_63
-  - first:
-      213: -6120569541439588899
-    second: area_1_tiles_0
-  - first:
-      213: 2829865668723801557
-    second: area_1_tiles_1
-  - first:
-      213: -2484513745598692720
-    second: area_1_tiles_2
-  - first:
-      213: 4703737457569117988
-    second: area_1_tiles_3
-  - first:
-      213: -4277485563536821345
-    second: area_1_tiles_4
-  - first:
-      213: 8317135521659295278
-    second: area_1_tiles_5
-  - first:
-      213: -2397256881859830746
-    second: area_1_tiles_6
-  - first:
-      213: 4921126551594712044
-    second: area_1_tiles_7
-  - first:
-      213: -8489416657094400894
-    second: area_1_tiles_8
-  - first:
-      213: 3628445087682346423
-    second: area_1_tiles_9
-  - first:
-      213: -1518383135893917819
-    second: area_1_tiles_10
-  - first:
-      213: -5207569220085495079
-    second: area_1_tiles_11
-  - first:
-      213: 6358760585102407491
-    second: area_1_tiles_12
-  - first:
-      213: -6096116779410054370
-    second: area_1_tiles_13
-  - first:
-      213: -8765645720078245101
-    second: area_1_tiles_14
-  - first:
-      213: -7258062369335821089
-    second: area_1_tiles_15
-  - first:
-      213: 7025250537951276565
-    second: area_1_tiles_16
-  - first:
-      213: 4284733921320055325
-    second: area_1_tiles_17
-  - first:
-      213: -4632593376446404408
-    second: area_1_tiles_18
-  - first:
-      213: 7118931557876356172
-    second: area_1_tiles_19
-  - first:
-      213: -3689672879420050529
-    second: area_1_tiles_20
-  - first:
-      213: 2444045986495955807
-    second: area_1_tiles_21
-  - first:
-      213: -4645194519614155950
-    second: area_1_tiles_22
-  - first:
-      213: 3073601917072300564
-    second: area_1_tiles_23
-  - first:
-      213: 2566764484623755063
-    second: area_1_tiles_24
-  - first:
-      213: 4809603012225540519
-    second: area_1_tiles_25
-  - first:
-      213: -3262677988257922299
-    second: area_1_tiles_26
-  - first:
-      213: -6556344404085288314
-    second: area_1_tiles_27
-  - first:
-      213: 2280888776614625380
-    second: area_1_tiles_28
-  - first:
-      213: -7307402225053064222
-    second: area_1_tiles_29
-  - first:
-      213: 2947863253505769564
-    second: area_1_tiles_30
-  - first:
-      213: 5207105861252249952
-    second: area_1_tiles_31
-  - first:
-      213: -4859494253253598409
-    second: area_1_tiles_32
-  - first:
-      213: 324304677289610503
-    second: area_1_tiles_33
-  - first:
-      213: 7788019298823551567
-    second: area_1_tiles_34
-  - first:
-      213: -5012712343659507394
-    second: area_1_tiles_35
-  - first:
-      213: -1311025919815804943
-    second: area_1_tiles_36
-  - first:
-      213: 1947266671928854215
-    second: area_1_tiles_37
-  - first:
-      213: 7627760543415969197
-    second: area_1_tiles_38
-  - first:
-      213: -2916611414532849262
-    second: area_1_tiles_39
-  - first:
-      213: 2146949290438724293
-    second: area_1_tiles_40
-  - first:
-      213: 1720024014004713768
-    second: area_1_tiles_41
-  - first:
-      213: -694851152813511762
-    second: area_1_tiles_42
-  - first:
-      213: 7840442234211482861
-    second: area_1_tiles_43
-  - first:
-      213: 6521018529828787087
-    second: area_1_tiles_44
-  - first:
-      213: -2854223025282731965
-    second: area_1_tiles_45
-  - first:
-      213: 7564525544006818625
-    second: area_1_tiles_46
-  - first:
-      213: 4024044051486612974
-    second: area_1_tiles_47
-  - first:
-      213: 2131340943386280661
-    second: area_1_tiles_48
-  - first:
-      213: -3086448955474344670
-    second: area_1_tiles_49
-  - first:
-      213: 694127156610397502
-    second: area_1_tiles_50
-  - first:
-      213: 7301476116541336380
-    second: area_1_tiles_51
-  - first:
-      213: -5139921369276367394
-    second: area_1_tiles_52
-  - first:
-      213: 4902932707931738220
-    second: area_1_tiles_53
-  - first:
-      213: -7896267675457486065
-    second: area_1_tiles_54
-  - first:
-      213: 3083783286128257934
-    second: area_1_tiles_55
-  - first:
-      213: -6978477672946233196
-    second: area_1_tiles_56
-  - first:
-      213: -1528935148276288045
-    second: area_1_tiles_57
-  - first:
-      213: 2047894207680054232
-    second: area_1_tiles_58
-  - first:
-      213: 2105043824894599664
-    second: area_1_tiles_59
-  - first:
-      213: 7272311841151811742
-    second: area_1_tiles_60
-  - first:
-      213: 6203736592417488040
-    second: area_1_tiles_61
-  - first:
-      213: 8965575832919070195
-    second: area_1_tiles_62
-  - first:
-      213: -2728523794153634171
-    second: area_1_tiles_63
   - first:
       213: -5884435400661891249
     second: Brinstar_Spritesheet_0
@@ -731,45 +155,6 @@ TextureImporter:
   - first:
       213: 8199334087852623917
     second: Brinstar_Spritesheet_50
-  - first:
-      213: 954677425945323717
-    second: Brinstar_Spritesheet_51
-  - first:
-      213: -2823003942685626204
-    second: Brinstar_Spritesheet_52
-  - first:
-      213: -4239595394113238114
-    second: Brinstar_Spritesheet_53
-  - first:
-      213: -3068830162631344579
-    second: Brinstar_Spritesheet_54
-  - first:
-      213: -8615917847994629558
-    second: Brinstar_Spritesheet_55
-  - first:
-      213: 8997459983945880173
-    second: Brinstar_Spritesheet_56
-  - first:
-      213: 6524461952864150604
-    second: Brinstar_Spritesheet_57
-  - first:
-      213: 332968200203641729
-    second: Brinstar_Spritesheet_58
-  - first:
-      213: -151668573587322789
-    second: Brinstar_Spritesheet_59
-  - first:
-      213: 4169665743193182358
-    second: Brinstar_Spritesheet_60
-  - first:
-      213: 3788543625848179629
-    second: Brinstar_Spritesheet_61
-  - first:
-      213: -6736743099050962462
-    second: Brinstar_Spritesheet_62
-  - first:
-      213: 8038950214489827735
-    second: Brinstar_Spritesheet_63
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -816,7 +201,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -872,15 +257,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 48
+        x: 1
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: f4780df1e29465ea0800000000000000
@@ -893,15 +282,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
+        x: 19
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: d7307c74b42204bd0800000000000000
@@ -914,15 +307,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
+        x: 37
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: b2db50ca09853d840800000000000000
@@ -935,15 +332,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
+        x: 55
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: beca38b1d92690820800000000000000
@@ -956,15 +357,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 64
-        y: 48
+        x: 73
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: d1a2d719a6d31e7f0800000000000000
@@ -977,15 +382,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 80
-        y: 48
+        x: 91
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 1b4a9e138818aaba0800000000000000
@@ -998,15 +407,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 48
+        x: 109
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 16975122fbe68c270800000000000000
@@ -1019,15 +432,21 @@ TextureImporter:
       name: Brinstar_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 112
-        y: 48
+        x: 127
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 0, y: 0}
+        - {x: -8, y: 0}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 645b950e7e5f5cb70800000000000000
@@ -1040,15 +459,21 @@ TextureImporter:
       name: Brinstar_Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 128
-        y: 48
+        x: 145
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 0}
+        - {x: 0, y: 0}
+        - {x: 0, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: d4874adafac0c2bb0800000000000000
@@ -1061,15 +486,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 144
-        y: 48
+        x: 163
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: e174e62b6a862abf0800000000000000
@@ -1082,15 +511,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 160
-        y: 48
+        x: 181
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: b1a4e8ae47fe80ec0800000000000000
@@ -1103,15 +536,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_11
       rect:
         serializedVersion: 2
-        x: 176
-        y: 48
+        x: 199
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 0, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: c229843e124ad2c00800000000000000
@@ -1124,15 +561,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 192
-        y: 48
+        x: 217
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 76473e39442741ea0800000000000000
@@ -1145,15 +586,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 208
-        y: 48
+        x: 235
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: ebff025010d0b9210800000000000000
@@ -1166,15 +611,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 224
-        y: 48
+        x: 253
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 0}
+        - {x: 8, y: 0}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 0cb6fc2735dd1fbd0800000000000000
@@ -1187,15 +636,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 240
-        y: 48
+        x: 271
+        y: 37
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 0}
+        - {x: 8, y: 0}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 010e297042b13fcb0800000000000000
@@ -1208,15 +661,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_16
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 1
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 9ac2cac2d1db4c760800000000000000
@@ -1229,15 +686,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_17
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
+        x: 19
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 0}
+        - {x: 8, y: 0}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 3c45e2ff18c04ab90800000000000000
@@ -1250,15 +711,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_18
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 37
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 0, y: 8}
+        - {x: 0, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: ffbcc56174e005f40800000000000000
@@ -1271,15 +736,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_19
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
+        x: 55
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 0, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: dcd41b4e3cd462320800000000000000
@@ -1292,15 +761,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_20
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 73
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: e4bb41b11b471c1e0800000000000000
@@ -1313,15 +786,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_21
       rect:
         serializedVersion: 2
-        x: 80
-        y: 32
+        x: 91
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 41d1c6183237b4410800000000000000
@@ -1334,15 +811,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_22
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
+        x: 109
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: efee0a2ae0c884e50800000000000000
@@ -1355,15 +836,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_23
       rect:
         serializedVersion: 2
-        x: 112
-        y: 32
+        x: 127
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: c60d53dba30804f10800000000000000
@@ -1376,15 +861,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_24
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
+        x: 145
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: fbeff0fb6ea41e0f0800000000000000
@@ -1397,15 +886,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_25
       rect:
         serializedVersion: 2
-        x: 144
-        y: 32
+        x: 163
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 50aa3cf66bb126250800000000000000
@@ -1418,15 +911,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_26
       rect:
         serializedVersion: 2
-        x: 160
-        y: 32
+        x: 181
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: af07c75f60c9f9e80800000000000000
@@ -1439,15 +936,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_27
       rect:
         serializedVersion: 2
-        x: 176
-        y: 32
+        x: 199
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: c2510916c0347c1f0800000000000000
@@ -1460,15 +961,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_28
       rect:
         serializedVersion: 2
-        x: 192
-        y: 32
+        x: 217
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 0, y: 0}
+        - {x: 8, y: 0}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: d57f51eb5b02f8770800000000000000
@@ -1481,15 +986,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_29
       rect:
         serializedVersion: 2
-        x: 208
-        y: 32
+        x: 235
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0, y: 0}
+        - {x: 0, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: bd8b7ee69fde93370800000000000000
@@ -1502,15 +1011,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_30
       rect:
         serializedVersion: 2
-        x: 224
-        y: 32
+        x: 253
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 0}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: 4ed341bb315262880800000000000000
@@ -1523,15 +1036,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_31
       rect:
         serializedVersion: 2
-        x: 240
-        y: 32
+        x: 271
+        y: 19
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: ae4ae616732200d30800000000000000
@@ -1544,15 +1061,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_32
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
+        x: 1
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: d92a6a5f3ead7b290800000000000000
@@ -1565,15 +1086,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_33
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
+        x: 19
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: f2c198ff95d0c58d0800000000000000
@@ -1586,15 +1111,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_34
       rect:
         serializedVersion: 2
-        x: 32
-        y: 16
+        x: 37
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: bb107882434739890800000000000000
@@ -1607,15 +1136,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_35
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
+        x: 55
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 8636f3476dff64170800000000000000
@@ -1628,15 +1161,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_36
       rect:
         serializedVersion: 2
-        x: 64
-        y: 16
+        x: 73
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 07ccb04bcdd322840800000000000000
@@ -1649,15 +1186,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_37
       rect:
         serializedVersion: 2
-        x: 80
-        y: 16
+        x: 91
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 18da1fa423b834ba0800000000000000
@@ -1670,15 +1211,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_38
       rect:
         serializedVersion: 2
-        x: 96
-        y: 16
+        x: 109
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: f0109f545ca73afa0800000000000000
@@ -1691,15 +1236,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_39
       rect:
         serializedVersion: 2
-        x: 112
-        y: 16
+        x: 127
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 5df4438987d5a0fa0800000000000000
@@ -1712,15 +1261,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_40
       rect:
         serializedVersion: 2
-        x: 128
-        y: 16
+        x: 145
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 0, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 5cd695412f1983d70800000000000000
@@ -1733,15 +1286,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_41
       rect:
         serializedVersion: 2
-        x: 144
-        y: 16
+        x: 163
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 0}
+        - {x: 8, y: 0}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 4e4fc2771cd6b1e40800000000000000
@@ -1754,15 +1311,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_42
       rect:
         serializedVersion: 2
-        x: 160
-        y: 16
+        x: 181
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: dd4c7331f799b00c0800000000000000
@@ -1775,15 +1336,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_43
       rect:
         serializedVersion: 2
-        x: 176
-        y: 16
+        x: 199
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 45216c55dd666a220800000000000000
@@ -1796,15 +1361,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_44
       rect:
         serializedVersion: 2
-        x: 192
-        y: 16
+        x: 217
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 0}
+        - {x: -8, y: 8}
+        - {x: 0, y: 8}
+        - {x: 0, y: 0}
       tessellationDetail: 0
       bones: []
       spriteID: 7c7015a2e1ca86af0800000000000000
@@ -1817,15 +1386,19 @@ TextureImporter:
       name: Brinstar_Spritesheet_45
       rect:
         serializedVersion: 2
-        x: 208
-        y: 16
+        x: 235
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 22c8fdc8698431340800000000000000
@@ -1838,376 +1411,23 @@ TextureImporter:
       name: Brinstar_Spritesheet_46
       rect:
         serializedVersion: 2
-        x: 224
-        y: 16
+        x: 253
+        y: 1
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: -8}
+        - {x: -8, y: 8}
+        - {x: 8, y: 8}
+        - {x: 8, y: -8}
       tessellationDetail: 0
       bones: []
       spriteID: 497926cbe3cf1ecb0800000000000000
       internalID: -4836307178440452204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_47
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 946d933f270938f80800000000000000
-      internalID: -8105476080955435447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_48
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9782ea8c80cb09870800000000000000
-      internalID: 8687650427110303865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_49
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4365887f2a2d58a80800000000000000
-      internalID: -8465128327193536972
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_50
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d28053539e2e9c170800000000000000
-      internalID: 8199334087852623917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_51
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c82e809f02bf3d00800000000000000
-      internalID: 954677425945323717
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_52
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a032bcfedca2d8d0800000000000000
-      internalID: -2823003942685626204
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_53
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9b8f7e837ee925c0800000000000000
-      internalID: -4239595394113238114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_54
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3eba58f9335965d0800000000000000
-      internalID: -3068830162631344579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_55
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a420558cd5c1e6880800000000000000
-      internalID: -8615917847994629558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_56
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d62d2ef4f266ddc70800000000000000
-      internalID: 8997459983945880173
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_57
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c44e40bf39b8b8a50800000000000000
-      internalID: 6524461952864150604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_58
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 183a3ae50d0fe9400800000000000000
-      internalID: 332968200203641729
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_59
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b58ccb36c3a25edf0800000000000000
-      internalID: -151668573587322789
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_60
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 690152fc6e0add930800000000000000
-      internalID: 4169665743193182358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_61
-      rect:
-        serializedVersion: 2
-        x: 208
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dab40caea5c939430800000000000000
-      internalID: 3788543625848179629
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_62
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e1d00e18d74282a0800000000000000
-      internalID: -6736743099050962462
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Brinstar_Spritesheet_63
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79967bdb0a6109f60800000000000000
-      internalID: 8038950214489827735
       vertices: []
       indices: 
       edges: []
