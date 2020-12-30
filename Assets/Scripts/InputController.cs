@@ -8,7 +8,7 @@ public class InputController : MonoBehaviour {
   private KeyCode aimKey   = KeyCode.UpArrow;
   private KeyCode shootKey = KeyCode.LeftShift;
 
-  void Update() {
+  private void Update() {
     SamusState.instance.isRunning.value  = Input.GetKey(runKey);
     SamusState.instance.isAiming.value   = Input.GetKey(aimKey);
     SamusState.instance.isShooting.value = Input.GetKey(shootKey);

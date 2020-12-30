@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +12,7 @@ public class SamusAnimation : MonoBehaviour {
 
   private Animator animator = null;
 
-  void Awake() {
+  private void Awake() {
     animator = GetComponent<Animator>();
 
     if(animator == null) {
@@ -21,7 +21,7 @@ public class SamusAnimation : MonoBehaviour {
     }
   }
 
-  void OnEnable() {
+  private void OnEnable() {
     SamusState.instance.isRunning.OnChange   += updateAnimatorRunning;
     SamusState.instance.isAiming.OnChange    += updateAnimatorAiming;
     SamusState.instance.isShooting.OnChange  += updateAnimatorShooting;
@@ -30,7 +30,7 @@ public class SamusAnimation : MonoBehaviour {
     SamusState.instance.jumpState.OnChange += updateAnimatorJumpState;
   }
 
-  void OnDisable() {
+  private void OnDisable() {
     SamusState.instance.isRunning.OnChange   -= updateAnimatorRunning;
     SamusState.instance.isAiming.OnChange    -= updateAnimatorAiming;
     SamusState.instance.isShooting.OnChange  -= updateAnimatorShooting;
