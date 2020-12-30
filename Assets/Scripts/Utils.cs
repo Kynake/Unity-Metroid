@@ -1,7 +1,7 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Utils {
+public static class Utils {
 
   public class WatchedValue<T> {
     public WatchedValue(T startingValue) {
