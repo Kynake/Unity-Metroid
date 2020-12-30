@@ -30,6 +30,7 @@ public sealed class SamusState {
   public Utils.WatchedValue<bool> isAiming    = new Utils.WatchedValue<bool>(false);
   public Utils.WatchedValue<bool> isShooting  = new Utils.WatchedValue<bool>(false);
   public Utils.WatchedValue<bool> isMorphball = new Utils.WatchedValue<bool>(false);
+  public Utils.WatchedValue<bool> isForward   = new Utils.WatchedValue<bool>(true);
 
   public Utils.WatchedValue<JumpState> jumpState = new Utils.WatchedValue<JumpState>(JumpState.Grounded);
 }
