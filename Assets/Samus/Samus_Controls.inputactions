@@ -19,7 +19,7 @@
                     "id": "504c8339-8e35-45d8-b7b8-2498ba3e45b0",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "Short Jump",
@@ -27,7 +27,7 @@
                     "id": "2a86c7f7-f1ac-4f30-a13a-b5d197a5614c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "Aim",
@@ -35,7 +35,7 @@
                     "id": "16a492a7-5659-4a6e-ae83-70bebc9256a8",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "Normal Shoot",
@@ -43,7 +43,7 @@
                     "id": "284d3bcd-83fd-454e-9c2a-c4c3f1485f84",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "Fast Shoot",
@@ -51,7 +51,7 @@
                     "id": "b5335107-ff40-46e9-b52f-146e8388a68f",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
                 },
                 {
                     "name": "Enter Morphball",
@@ -146,15 +146,37 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "4a527ce5-15a0-432f-bff1-d28593020503",
-                    "path": "<Gamepad>/dpad/x",
+                    "name": "Gamepad D-Pad",
+                    "id": "0d633191-a2e6-46bb-971a-9dbb73117210",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "6efbdc3b-9c8a-4280-82f0-65a36a8c426a",
+                    "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Run",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "a80fb386-192a-4f9f-8ee6-683b414ee284",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -505,15 +527,37 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "9f9f844f-6d33-4726-9499-2fdf1b165175",
-                    "path": "<Gamepad>/dpad/x",
+                    "name": "Gamepad D-Pad",
+                    "id": "2f4fa0d7-02b3-432b-b24f-a5f694e4a160",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "5bb5ef99-d009-4405-8357-da32c8463d95",
+                    "path": "<Gamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Run",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "3e001761-f1e1-4096-bdd4-4742f038ea61",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
