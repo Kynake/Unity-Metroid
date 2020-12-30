@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SamusController : MonoBehaviour
-{
+public class SamusController : MonoBehaviour {
 
   public float movementSpeed; // in tiles per second
   public float jumpHeight; // in tiles per second
 
-//   public PlayerInput playerInput;
-
   private Rigidbody2D _rigidbody;
+  private PlayerInput _playerInput;
 
   private void Awake() {
     _rigidbody = GetComponent<Rigidbody2D>();
-    if (_rigidbody == null)
-    {
+    if (_rigidbody == null) {
       Debug.LogError("Samus Rigidbody2D not found!");
+      return;
+    }
+
+    _playerInput = GetComponent<PlayerInput>();
+    if(_playerInput == null) {
+      Debug.LogError("Samus PlayerInput not found!");
       return;
     }
   }
@@ -30,52 +33,43 @@ public class SamusController : MonoBehaviour
 
   }
 
-  public void OnRun(InputAction.CallbackContext value) {
+  public void OnRun(InputValue value) {
     print("OnRun");
   }
 
-  public void OnLongJump(InputAction.CallbackContext value) {
-
+  public void OnLongJump(InputValue value) {
     print("OnLongJump");
   }
 
-  public void OnShortJump(InputAction.CallbackContext value) {
-
+  public void OnShortJump(InputValue value) {
     print("OnShortJump");
   }
 
-  public void OnAim(InputAction.CallbackContext value) {
-
+  public void OnAim(InputValue value) {
     print("OnAim");
   }
 
-  public void OnNormalShoot(InputAction.CallbackContext value) {
-
+  public void OnNormalShoot(InputValue value) {
     print("OnNormalShoot");
   }
 
-  public void OnFastShoot(InputAction.CallbackContext value) {
-
+  public void OnFastShoot(InputValue value) {
     print("OnFastShoot");
   }
 
-  public void OnEnterMorphball(InputAction.CallbackContext value) {
-
+  public void OnEnterMorphball(InputValue value) {
     print("OnOnEnterMorphballRun");
   }
 
-  public void OnExitMorphball(InputAction.CallbackContext value) {
-
+  public void OnExitMorphball(InputValue value) {
     print("OnExitMorphball");
   }
 
-  public void OnSwitchWeapon(InputAction.CallbackContext value) {
-
+  public void OnSwitchWeapon(InputValue value) {
     print("OnOnSwitchWeaponun");
   }
 
-  public void OnPauseGame(InputAction.CallbackContext value) {
-
+  public void OnPauseGame(InputValue value) {
     print("OnPauseGame");
   }
 

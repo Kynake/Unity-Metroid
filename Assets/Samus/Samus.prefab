@@ -176,8 +176,9 @@ GameObject:
   - component: {fileID: 6358924235428637853}
   - component: {fileID: 2326562148580219572}
   - component: {fileID: 1686648513319867767}
+  - component: {fileID: -6066059045221723542}
+  - component: {fileID: 7902342385481856037}
   - component: {fileID: 8699384406466816757}
-  - component: {fileID: 1179489496239489342}
   m_Layer: 8
   m_Name: Samus
   m_TagString: Untagged
@@ -267,6 +268,59 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6066059045221723542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562398292872847884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: b4a4e33ba00fd7246b1c20a2c4157ded, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 46654853-de2b-45fe-b5ec-159b6e63e00f
+    m_ActionName: Default/Test[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fb9faf37-d380-4ea6-b3b5-445da68d8288
+    m_ActionName: Other/TestOther[/Keyboard/a]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Samus Default Controls
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &7902342385481856037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562398292872847884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f17c305e73198d346aea51d4fa2e54e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 0
+  jumpHeight: 0
+  testVar: 0
 --- !u!114 &8699384406466816757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,17 +331,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d137948960a9a44d874261fb25eb9c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1179489496239489342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5562398292872847884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58cf32a97247eea44914ccbd0ab33802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
