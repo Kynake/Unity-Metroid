@@ -26,12 +26,12 @@ public sealed class SamusState {
     get { return _instance; }
   }
 
-  public WatchedValue<bool> isRunning   = new WatchedValue<bool>(false);
-  public WatchedValue<bool> isAiming    = new WatchedValue<bool>(false);
-  public WatchedValue<bool> isShooting  = new WatchedValue<bool>(false);
-  public WatchedValue<bool> isMorphball = new WatchedValue<bool>(false);
+  public Utils.WatchedValue<bool> isRunning   = new Utils.WatchedValue<bool>(false);
+  public Utils.WatchedValue<bool> isAiming    = new Utils.WatchedValue<bool>(false);
+  public Utils.WatchedValue<bool> isShooting  = new Utils.WatchedValue<bool>(false);
+  public Utils.WatchedValue<bool> isMorphball = new Utils.WatchedValue<bool>(false);
 
-  public WatchedValue<JumpState> jumpState = new WatchedValue<JumpState>(JumpState.Grounded);
+  public Utils.WatchedValue<JumpState> jumpState = new Utils.WatchedValue<JumpState>(JumpState.Grounded);
 }
 
 
