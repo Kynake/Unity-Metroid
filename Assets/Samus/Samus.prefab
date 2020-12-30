@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3084552374710953174}
   - component: {fileID: 587080400950283592}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lower Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1635797152738874284}
   - component: {fileID: 352743431428107333}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Upper Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 1686648513319867767}
   - component: {fileID: 8699384406466816757}
   - component: {fileID: 1179489496239489342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Samus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
