@@ -34,19 +34,19 @@ public class SamusController : MonoBehaviour {
   }
 
   public void OnRun(InputValue value) {
-    print("OnRun");
+    print(value.Get<float>());
   }
 
   public void OnLongJump(InputValue value) {
-    print("OnLongJump");
+    print("On Long Jump");
   }
 
   public void OnShortJump(InputValue value) {
-    print("OnShortJump");
+    print(value);
   }
 
   public void OnAim(InputValue value) {
-    print("OnAim");
+    print(value.isPressed);
   }
 
   public void OnNormalShoot(InputValue value) {
