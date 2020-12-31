@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +8,8 @@ public class SamusController : MonoBehaviour {
   public float jumpHeight; // in tiles per second
 
   private bool _canLongJumpAgain = true;
-  private bool _isShortJumping = false;
+  // private bool _isLongJumping = false;
+  // private bool _isShortJumping = false;
   private bool _jumpInertiaStopped = false;
 
   // Object components
@@ -50,13 +51,13 @@ public class SamusController : MonoBehaviour {
   }
 
   private void OnEnable() {
-    _samusInput.longJumpPressed.OnChange += handleLongJumpInputChange;
-    SamusState.instance.jumpState.OnChange += handleShortJumpEnd;
+    _samusInput.longJumpPressed.OnChange += longJumpInputChanged;
+    SamusState.instance.jumpState.OnChange += jumpStateChanged;
   }
 
   private void OnDisable() {
-    _samusInput.longJumpPressed.OnChange -= handleLongJumpInputChange;
-    SamusState.instance.jumpState.OnChange -= handleShortJumpEnd;
+    _samusInput.longJumpPressed.OnChange -= longJumpInputChanged;
+    SamusState.instance.jumpState.OnChange -= jumpStateChanged;
   }
 
   private void Update() {
@@ -79,11 +80,11 @@ public class SamusController : MonoBehaviour {
         jump();
       }
 
-      // Short Jump
-      if(_samusInput.shortJumpPressed.value) {
-        _isShortJumping = true;
-        jump();
-      }
+      // // Short Jump
+      // if(_samusInput.shortJumpPressed.value) {
+      //   _isShortJumping = true;
+      //   jump();
+      // }
     }
 
   }
@@ -141,21 +142,35 @@ public class SamusController : MonoBehaviour {
     SamusState.instance.jumpState.value = JumpState.Jumping;
   }
 
-  // Stop longjump when user releases button
-  private void handleLongJumpInputChange(bool longJumpPressed) {
-    if(!longJumpPressed) {
+  private void longJumpInputChanged(bool longJumpPressed) {
+    handleLongJump(longJumpPressed, SamusState.instance.jumpState.value);
+  }
+
+  private void jumpStateChanged(JumpState jumpState) {
+    // if(_isShortJumping) {
+    //   handleShortJumpEnd(jumpState);
+    // }
+
+    handleLongJump(_samusInput.longJumpPressed.value, jumpState);
+  }
+
+  // Can Longjump after releasing the button, but ignore if pressed again while in air
+  private void handleLongJump(bool longJumpPressed, JumpState jumpState) {
+    if(longJumpPressed && jumpState != JumpState.Grounded) {
+      _canLongJumpAgain = false;
+    } else if(!longJumpPressed) {
       _canLongJumpAgain = true;
       stopJumpInertia();
     }
   }
 
-  // Stop Short jump when jump state changes
-  private void handleShortJumpEnd(JumpState jumpState) {
-    if(_isShortJumping && jumpState == JumpState.Falling) {
-      _isShortJumping = false;
-      stopJumpInertia();
-    }
-  }
+  // // Stop Short jump when jump state changes
+  // private void handleShortJumpEnd(JumpState jumpState) {
+  //   if(jumpState == JumpState.Falling) {
+  //     _isShortJumping = false;
+  //     stopJumpInertia();
+  //   }
+  // }
 
   private void stopJumpInertia() {
     // Jump button released while on air, after required part of the jump has ended and samus is still going up
