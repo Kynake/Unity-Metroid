@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -64,6 +64,10 @@ public class SamusController : MonoBehaviour {
     if(SamusState.instance.isRunning.value) {
       _holdingVector3.Set((SamusState.instance.isForward.value? 1 : -1) * movementSpeed * Time.deltaTime, 0, 0);
       transform.position += _holdingVector3;
+    }
+
+    if(_rigidbody.velocity.y != 0 && SamusState.instance.jumpState.value == JumpState.Grounded) {
+      SamusState.instance.jumpState.value = JumpState.Falling;
     }
 
     // Should Jump
