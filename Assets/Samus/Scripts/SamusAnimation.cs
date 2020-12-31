@@ -60,10 +60,6 @@ public class SamusAnimation : MonoBehaviour {
   }
 
   private void updateAnimatorJumpState(JumpState value) {
-    if(SamusState.instance.jumpState.value == value) {
-      return;
-    }
-
     switch(value) {
       case JumpState.Grounded:
         animator.SetBool("isGrounded", true);
@@ -72,13 +68,17 @@ public class SamusAnimation : MonoBehaviour {
 
       case JumpState.Jumping:
         animator.SetBool("isGrounded", false);
-        animator.SetBool("isGrounded", true);
+        animator.SetBool("isJumping", true);
         break;
 
       case JumpState.Falling:
         animator.SetBool("isGrounded", false);
-        animator.SetBool("isGrounded", false);
+        animator.SetBool("isJumping", false);
         break;
     }
+  }
+
+  private void updateJumpState(JumpState value) {
+    SamusState.instance.jumpState.value = value;
   }
 }
