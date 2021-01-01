@@ -16,15 +16,7 @@ public enum JumpState {
   Falling
 }
 
-public sealed class SamusState {
-  private static readonly SamusState _instance = new SamusState();
-
-  static  SamusState() {}
-  private SamusState() {}
-
-  public static SamusState instance {
-    get { return _instance; }
-  }
+public class SamusState : MonoBehaviour {
 
   public Utils.WatchedValue<bool> isRunning      = new Utils.WatchedValue<bool>(false);
   public Utils.WatchedValue<bool> isAiming       = new Utils.WatchedValue<bool>(false);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public sealed class SamusInput : MonoBehaviour {
+public class SamusInput : MonoBehaviour {
   // Input Status vars
   public Utils.WatchedValue<int> runDirectionPressed = new Utils.WatchedValue<int>(0);
 
@@ -23,6 +23,7 @@ public sealed class SamusInput : MonoBehaviour {
 
   // Object Components
   private PlayerInput _playerInput;
+  private SamusState _samusState;
 
   // Holding vars
   private Vector3 _holdingVector = Vector3.zero;
@@ -31,6 +32,12 @@ public sealed class SamusInput : MonoBehaviour {
     _playerInput = GetComponent<PlayerInput>();
     if(_playerInput == null) {
       Debug.LogError("Samus PlayerInput not found!");
+      return;
+    }
+
+    _samusState = GetComponent<SamusState>();
+    if(_samusState == null) {
+      Debug.LogError("SamusState Script not found!");
       return;
     }
   }
@@ -46,30 +53,30 @@ public sealed class SamusInput : MonoBehaviour {
 
     runDirectionPressed.value = direction;
 
-    SamusState.instance.isRunning.value = direction != 0;
+    _samusState.isRunning.value = direction != 0;
 
     // Rotate Sprite
     if(direction != 0) {
       _holdingVector.Set(direction, 1, 1);
       transform.localScale = _holdingVector;
-      SamusState.instance.isForward.value = direction > 0;
+      _samusState.isForward.value = direction > 0;
     }
   }
 
   public void OnAim(InputValue value) {
     aimPressed.value = value.isPressed;
-    SamusState.instance.isAiming.value = value.isPressed;
+    _samusState.isAiming.value = value.isPressed;
   }
 
   public void OnEnterMorphball(InputValue value) {
     morphballPressed.value = value.isPressed;
-    SamusState.instance.isMorphball.value = true;
+    _samusState.isMorphball.value = true;
     print("OnOnEnterMorphballRun");
   }
 
   public void OnExitMorphball(InputValue value) {
     morphballPressed.value = value.isPressed;
-    SamusState.instance.isMorphball.value = false;
+    _samusState.isMorphball.value = false;
     print("OnExitMorphball");
   }
 

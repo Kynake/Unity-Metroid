@@ -10,11 +10,18 @@ public class SamusAnimation : MonoBehaviour {
     Aim_Shoot = 3
   }
 
-  private Animator animator = null;
+  private Animator animator;
+  private SamusState _samusState;
+
 
   private void Awake() {
-    animator = GetComponent<Animator>();
+    _samusState = GetComponent<SamusState>();
+    if (_samusState == null) {
+      Debug.LogError("SamusState Script not found!");
+      return;
+    }
 
+    animator = GetComponent<Animator>();
     if(animator == null) {
       Debug.LogError("Samus Animator not found!");
       return;
@@ -22,21 +29,21 @@ public class SamusAnimation : MonoBehaviour {
   }
 
   private void OnEnable() {
-    SamusState.instance.isRunning.OnChange   += updateAnimatorRunning;
-    SamusState.instance.isAiming.OnChange    += updateAnimatorAiming;
-    SamusState.instance.isShooting.OnChange  += updateAnimatorShooting;
-    SamusState.instance.isMorphball.OnChange += updateAnimatorMorphball;
+    _samusState.isRunning.OnChange   += updateAnimatorRunning;
+    _samusState.isAiming.OnChange    += updateAnimatorAiming;
+    _samusState.isShooting.OnChange  += updateAnimatorShooting;
+    _samusState.isMorphball.OnChange += updateAnimatorMorphball;
 
-    SamusState.instance.jumpState.OnChange += updateAnimatorJumpState;
+    _samusState.jumpState.OnChange += updateAnimatorJumpState;
   }
 
   private void OnDisable() {
-    SamusState.instance.isRunning.OnChange   -= updateAnimatorRunning;
-    SamusState.instance.isAiming.OnChange    -= updateAnimatorAiming;
-    SamusState.instance.isShooting.OnChange  -= updateAnimatorShooting;
-    SamusState.instance.isMorphball.OnChange -= updateAnimatorMorphball;
+    _samusState.isRunning.OnChange   -= updateAnimatorRunning;
+    _samusState.isAiming.OnChange    -= updateAnimatorAiming;
+    _samusState.isShooting.OnChange  -= updateAnimatorShooting;
+    _samusState.isMorphball.OnChange -= updateAnimatorMorphball;
 
-    SamusState.instance.jumpState.OnChange -= updateAnimatorJumpState;
+    _samusState.jumpState.OnChange -= updateAnimatorJumpState;
   }
 
   private void updateAnimatorRunning(bool value) {
@@ -46,13 +53,13 @@ public class SamusAnimation : MonoBehaviour {
   private void updateAnimatorAiming(bool value) {
     animator.SetBool("isAiming", value);
     animator.SetLayerWeight((int) Layers.Aim, value? 1f : 0f);
-    animator.SetLayerWeight((int) Layers.Aim_Shoot, value && SamusState.instance.isShooting.value? 1f : 0f);
+    animator.SetLayerWeight((int) Layers.Aim_Shoot, value && _samusState.isShooting.value? 1f : 0f);
   }
 
   private void updateAnimatorShooting(bool value) {
     animator.SetBool("isShooting", value);
     animator.SetLayerWeight((int) Layers.Shoot, value? 1f : 0f);
-    animator.SetLayerWeight((int) Layers.Aim_Shoot, value && SamusState.instance.isAiming.value? 1f : 0f);
+    animator.SetLayerWeight((int) Layers.Aim_Shoot, value && _samusState.isAiming.value? 1f : 0f);
   }
 
   private void updateAnimatorMorphball(bool value) {
@@ -79,6 +86,6 @@ public class SamusAnimation : MonoBehaviour {
   }
 
   private void updateJumpState(JumpState value) {
-    SamusState.instance.jumpState.value = value;
+    _samusState.jumpState.value = value;
   }
 }

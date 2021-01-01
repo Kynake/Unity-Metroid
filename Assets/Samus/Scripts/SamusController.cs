@@ -14,7 +14,8 @@ public class SamusController : MonoBehaviour {
 
   // Object components
   private Rigidbody2D _rigidbody;
-  private SamusInput  _samusInput;
+  private SamusState _samusState;
+  private SamusInput _samusInput;
 
   // Useful consts
   private int _terrainLayer;
@@ -26,6 +27,12 @@ public class SamusController : MonoBehaviour {
   private List<ContactPoint2D> _holdingContactPoints = new List<ContactPoint2D>();
 
   private void Awake() {
+    _samusState = GetComponent<SamusState>();
+    if (_samusState == null) {
+      Debug.LogError("SamusState Script not found!");
+      return;
+    }
+
     _samusInput = GetComponent<SamusInput>();
     if (_samusInput == null) {
       Debug.LogError("SamusInput Script not found!");
@@ -52,27 +59,27 @@ public class SamusController : MonoBehaviour {
 
   private void OnEnable() {
     _samusInput.longJumpPressed.OnChange += longJumpInputChanged;
-    SamusState.instance.jumpState.OnChange += jumpStateChanged;
+    _samusState.jumpState.OnChange += jumpStateChanged;
   }
 
   private void OnDisable() {
     _samusInput.longJumpPressed.OnChange -= longJumpInputChanged;
-    SamusState.instance.jumpState.OnChange -= jumpStateChanged;
+    _samusState.jumpState.OnChange -= jumpStateChanged;
   }
 
   private void Update() {
     // Move Sideways
-    if(SamusState.instance.isRunning.value) {
-      _holdingVector3.Set((SamusState.instance.isForward.value? 1 : -1) * movementSpeed * Time.deltaTime, 0, 0);
+    if(_samusState.isRunning.value) {
+      _holdingVector3.Set((_samusState.isForward.value? 1 : -1) * movementSpeed * Time.deltaTime, 0, 0);
       transform.position += _holdingVector3;
     }
 
-    if(_rigidbody.velocity.y != 0 && SamusState.instance.jumpState.value == JumpState.Grounded) {
-      SamusState.instance.jumpState.value = JumpState.Falling;
+    if(_rigidbody.velocity.y != 0 && _samusState.jumpState.value == JumpState.Grounded) {
+      _samusState.jumpState.value = JumpState.Falling;
     }
 
     // Should Jump
-    if(SamusState.instance.jumpState.value == JumpState.Grounded) {
+    if(_samusState.jumpState.value == JumpState.Grounded) {
       // Long Jump
       if(_canLongJumpAgain && _samusInput.longJumpPressed.value) {
         // Do not longjump Until button has been released and pressed again
@@ -106,14 +113,14 @@ public class SamusController : MonoBehaviour {
     _rigidbody.GetContacts(_holdingContactPoints);
     foreach (var contactPoint in _holdingContactPoints) {
       // Floor Collision
-      if(SamusState.instance.jumpState.value == JumpState.Grounded) {
+      if(_samusState.jumpState.value == JumpState.Grounded) {
         continue;
       }
 
       if(contactPoint.normal.y < 0) { // Hit Ceiling
-        SamusState.instance.jumpState.value = JumpState.Falling;
+        _samusState.jumpState.value = JumpState.Falling;
       } else if(contactPoint.normal.y > 0) { // Hit Floor
-        SamusState.instance.jumpState.value = JumpState.Grounded;
+        _samusState.jumpState.value = JumpState.Grounded;
       }
     }
   }
@@ -126,8 +133,8 @@ public class SamusController : MonoBehaviour {
 
     // If the collision was exited while Samus was grounded,
     // then the player walked of the edge of a platform without jumping
-    if(SamusState.instance.jumpState.value == JumpState.Grounded) {
-      SamusState.instance.jumpState.value = JumpState.Falling;
+    if(_samusState.jumpState.value == JumpState.Grounded) {
+      _samusState.jumpState.value = JumpState.Falling;
     }
   }
 
@@ -138,11 +145,11 @@ public class SamusController : MonoBehaviour {
     _holdingVector2.Set(0, jumpHeight);
     _rigidbody.AddForce(_holdingVector2, ForceMode2D.Impulse);
 
-    SamusState.instance.jumpState.value = JumpState.Jumping;
+    _samusState.jumpState.value = JumpState.Jumping;
   }
 
   private void longJumpInputChanged(bool longJumpPressed) {
-    handleLongJump(longJumpPressed, SamusState.instance.jumpState.value);
+    handleLongJump(longJumpPressed, _samusState.jumpState.value);
   }
 
   private void jumpStateChanged(JumpState jumpState) {
@@ -173,7 +180,7 @@ public class SamusController : MonoBehaviour {
 
   private void stopJumpInertia() {
     // Jump button released while on air, after required part of the jump has ended and samus is still going up
-    if(!_jumpInertiaStopped && SamusState.instance.jumpState.value == JumpState.Falling && _rigidbody.velocity.y > 0) {
+    if(!_jumpInertiaStopped && _samusState.jumpState.value == JumpState.Falling && _rigidbody.velocity.y > 0) {
       _rigidbody.velocity = Vector2.zero;
       _jumpInertiaStopped = true;
     }

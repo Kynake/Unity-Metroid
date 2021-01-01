@@ -177,8 +177,9 @@ GameObject:
   - component: {fileID: 2326562148580219572}
   - component: {fileID: 1686648513319867767}
   - component: {fileID: -6066059045221723542}
-  - component: {fileID: 8073169938663375024}
   - component: {fileID: 7902342385481856037}
+  - component: {fileID: 8734788131067168126}
+  - component: {fileID: 8073169938663375024}
   - component: {fileID: 8699384406466816757}
   m_Layer: 8
   m_Name: Samus
@@ -307,18 +308,6 @@ MonoBehaviour:
   m_DefaultActionMap: Samus Default Controls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8073169938663375024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5562398292872847884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db7717565cca6dd499d7440287b1d4c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7902342385481856037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +322,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5.25
   jumpHeight: 14.5
+--- !u!114 &8734788131067168126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562398292872847884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b488cb12819ad104899278a0877174bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8073169938663375024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5562398292872847884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db7717565cca6dd499d7440287b1d4c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8699384406466816757
 MonoBehaviour:
   m_ObjectHideFlags: 0

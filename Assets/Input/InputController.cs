@@ -8,19 +8,29 @@ public class InputController : MonoBehaviour {
   private KeyCode aimKey   = KeyCode.UpArrow;
   private KeyCode shootKey = KeyCode.LeftShift;
 
-  private void Update() {
-    SamusState.instance.isRunning.value  = Input.GetKey(runKey);
-    SamusState.instance.isAiming.value   = Input.GetKey(aimKey);
-    SamusState.instance.isShooting.value = Input.GetKey(shootKey);
+  private SamusState _samusState;
 
-    SamusState.instance.jumpState.value = newJumpState(Input.GetKey(jumpKey));
+  private void Awake() {
+    _samusState = GetComponent<SamusState>();
+    if(_samusState == null) {
+      Debug.LogError("SamusState Script not found!");
+      return;
+    }
   }
 
-  private static JumpState newJumpState(bool jumpKeyPressed) {
-    if(SamusState.instance.jumpState.value == JumpState.Grounded && jumpKeyPressed) {
+  private void Update() {
+    _samusState.isRunning.value  = Input.GetKey(runKey);
+    _samusState.isAiming.value   = Input.GetKey(aimKey);
+    _samusState.isShooting.value = Input.GetKey(shootKey);
+
+    _samusState.jumpState.value = newJumpState(Input.GetKey(jumpKey));
+  }
+
+  private JumpState newJumpState(bool jumpKeyPressed) {
+    if(_samusState.jumpState.value == JumpState.Grounded && jumpKeyPressed) {
       return JumpState.Jumping;
     }
 
-    return SamusState.instance.jumpState.value;
+    return _samusState.jumpState.value;
   }
 }
