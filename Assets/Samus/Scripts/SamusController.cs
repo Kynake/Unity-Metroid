@@ -90,12 +90,12 @@ public class SamusController : MonoBehaviour {
   }
 
   // Collision Detection
-  private void OnCollisionEnter2D(Collision2D other) {
-    // Ignore terrain here
-    if(other.gameObject.layer == _terrainLayer) {
-      return;
-    }
-  }
+  // private void OnCollisionEnter2D(Collision2D other) {
+  //   // Ignore terrain here
+  //   if(other.gameObject.layer == _terrainLayer) {
+  //     return;
+  //   }
+  // }
 
   private void OnCollisionStay2D(Collision2D other) {
     // Only look at terrain collisions
@@ -103,11 +103,11 @@ public class SamusController : MonoBehaviour {
       return;
     }
 
-    other.GetContacts(_holdingContactPoints);
-    _holdingContactPoints.ForEach(contactPoint => {
-      SamusState.instance.isTouchingWall.value = contactPoint.normal.x != 0;
+    _rigidbody.GetContacts(_holdingContactPoints);
+    foreach (var contactPoint in _holdingContactPoints) {
+      // Floor Collision
       if(SamusState.instance.jumpState.value == JumpState.Grounded) {
-        return;
+        continue;
       }
 
       if(contactPoint.normal.y < 0) { // Hit Ceiling
@@ -115,7 +115,7 @@ public class SamusController : MonoBehaviour {
       } else if(contactPoint.normal.y > 0) { // Hit Floor
         SamusState.instance.jumpState.value = JumpState.Grounded;
       }
-    });
+    }
   }
 
   private void OnCollisionExit2D(Collision2D other) {
@@ -130,7 +130,6 @@ public class SamusController : MonoBehaviour {
       SamusState.instance.jumpState.value = JumpState.Falling;
     }
   }
-
 
   // Jump Related
   private void jump() {
