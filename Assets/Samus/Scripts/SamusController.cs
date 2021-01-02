@@ -10,6 +10,9 @@ public class SamusController : MonoBehaviour {
   public float toMorphballHop; // in tiles
   public float fromMorphballHop; // in tiles
 
+  public LayerMask terrainLayer;
+  public LayerMask enemiesLayer;
+
   private bool _canLongJumpAgain = true;
   // private bool _isLongJumping = false;
   // private bool _isShortJumping = false;
@@ -20,10 +23,6 @@ public class SamusController : MonoBehaviour {
   private BoxCollider2D _boxCollider;
   private SamusState    _samusState;
   private SamusInput    _samusInput;
-
-  // Useful consts
-  private int _terrainLayer;
-  private int _enemiesLayer;
 
   // Holding vars
   private Vector2 _holdingVector2 = Vector2.zero;
@@ -56,17 +55,6 @@ public class SamusController : MonoBehaviour {
       Debug.LogError("Samus BoxCollider2D not found!");
       return;
     }
-
-    // Layers
-    _terrainLayer = LayerMask.NameToLayer("Terrain");
-    if(_terrainLayer == -1) {
-      print("Terrain Layer not Found!");
-    }
-
-    _enemiesLayer = LayerMask.NameToLayer("Enemies");
-    if(_enemiesLayer == -1) {
-      print("Enemies Layer not Found!");
-    }
   }
 
   private void OnEnable() {
@@ -82,6 +70,7 @@ public class SamusController : MonoBehaviour {
   }
 
   private void Update() {
+
     // Move Sideways
     if(_samusState.isRunning.value) {
       _holdingVector3.Set((_samusState.isForward.value? 1 : -1) * movementSpeed * Time.deltaTime, 0, 0);
@@ -111,16 +100,17 @@ public class SamusController : MonoBehaviour {
   }
 
   // Collision Detection
+
   // private void OnCollisionEnter2D(Collision2D other) {
   //   // Ignore terrain here
-  //   if(other.gameObject.layer == _terrainLayer) {
+  //   if(((1 << other.gameObject.layer) & terrainLayer) != 0) {
   //     return;
   //   }
   // }
 
   private void OnCollisionStay2D(Collision2D other) {
     // Only look at terrain collisions
-    if(other.gameObject.layer != _terrainLayer) {
+    if(((1 << other.gameObject.layer) & terrainLayer) == 0) {
       return;
     }
 
@@ -141,7 +131,7 @@ public class SamusController : MonoBehaviour {
 
   private void OnCollisionExit2D(Collision2D other) {
     // Only look at terrain collisions
-    if(other.gameObject.layer != _terrainLayer) {
+    if(((1 << other.gameObject.layer) & terrainLayer) == 0) {
       return;
     }
 
@@ -210,8 +200,6 @@ public class SamusController : MonoBehaviour {
     if(!isMorphball) {
       doMorphballHop();
     }
-
-
   }
 
   public void doMorphballHop() {
