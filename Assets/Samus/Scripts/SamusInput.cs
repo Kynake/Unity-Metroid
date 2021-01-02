@@ -71,7 +71,7 @@ public class SamusInput : MonoBehaviour {
 
   public void OnEnterMorphball(InputValue value) {
     // Only enter morphball when grounded
-    if(_samusState.jumpState.value != JumpState.Grounded) {
+    if(_samusState.jumpState.value != JumpState.Grounded || _samusState.isRunning.value) {
       return;
     }
     _playerInput.SwitchCurrentActionMap(_morphballActionMap);
