@@ -84,8 +84,4 @@ public class SamusAnimation : MonoBehaviour {
         break;
     }
   }
-
-  private void updateJumpState(JumpState value) {
-    _samusState.jumpState.value = value;
-  }
 }

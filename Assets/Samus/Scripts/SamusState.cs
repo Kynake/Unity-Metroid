@@ -25,7 +25,13 @@ public class SamusState : MonoBehaviour {
   public Utils.WatchedValue<bool> isShooting     = new Utils.WatchedValue<bool>(false);
 
   public Utils.WatchedValue<JumpState> jumpState = new Utils.WatchedValue<JumpState>(JumpState.Grounded);
+
+  public void updateIsRunning(bool value)   { isRunning.value = value;   }
+  public void updateIsAiming(bool value)    { isAiming.value = value;    }
+  public void updateIsMorphball(bool value) { isMorphball.value = value; }
+  public void updateIsForward(bool value)   { isForward.value = value;   }
+  public void updateIsShooting(bool value)  { isShooting.value = value;  }
+
+  public void updateJumpState(JumpState value) { jumpState.value = value; }
+
 }
-
-
-

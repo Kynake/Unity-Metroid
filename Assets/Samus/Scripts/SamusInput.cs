@@ -8,9 +8,6 @@ public class SamusInput : MonoBehaviour {
   public Utils.WatchedValue<int> runDirectionPressed = new Utils.WatchedValue<int>(0);
 
   public Utils.WatchedValue<bool> aimPressed          = new Utils.WatchedValue<bool>(false);
-  public Utils.WatchedValue<bool> morphballPressed    = new Utils.WatchedValue<bool>(false);
-  public Utils.WatchedValue<bool> switchWeaponPressed = new Utils.WatchedValue<bool>(false);
-  public Utils.WatchedValue<bool> pauseGamePressed    = new Utils.WatchedValue<bool>(false);
 
   // Jump
   public Utils.WatchedValue<bool> longJumpPressed  = new Utils.WatchedValue<bool>(false);
@@ -24,6 +21,10 @@ public class SamusInput : MonoBehaviour {
   // Object Components
   private PlayerInput _playerInput;
   private SamusState _samusState;
+
+  // Useful consts
+  private const string _defaultActionMap = "Samus Default Controls";
+  private const string _morphballActionMap = "Morphball";
 
   // Holding vars
   private Vector3 _holdingVector = Vector3.zero;
@@ -69,24 +70,24 @@ public class SamusInput : MonoBehaviour {
   }
 
   public void OnEnterMorphball(InputValue value) {
-    morphballPressed.value = value.isPressed;
+    // Only enter morphball when grounded
+    if(_samusState.jumpState.value != JumpState.Grounded) {
+      return;
+    }
+    _playerInput.SwitchCurrentActionMap(_morphballActionMap);
     _samusState.isMorphball.value = true;
-    print("OnOnEnterMorphballRun");
   }
 
   public void OnExitMorphball(InputValue value) {
-    morphballPressed.value = value.isPressed;
+    _playerInput.SwitchCurrentActionMap(_defaultActionMap);
     _samusState.isMorphball.value = false;
-    print("OnExitMorphball");
   }
 
   public void OnSwitchWeapon(InputValue value) {
-    switchWeaponPressed.value = value.isPressed;
     print("OnOnSwitchWeaponun");
   }
 
   public void OnPauseGame(InputValue value) {
-    pauseGamePressed.value = value.isPressed;
     print("OnPauseGame");
   }
 

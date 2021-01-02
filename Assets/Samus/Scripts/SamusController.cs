@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class SamusController : MonoBehaviour {
 
-  public float movementSpeed = 5.25f; // in tiles per second
-  public float jumpHeight; // in tiles per second
+  public float movementSpeed; // in tiles per second
+  public float jumpHeight;
+
+  public float toMorphballHop; // in tiles
+  public float fromMorphballHop; // in tiles
 
   private bool _canLongJumpAgain = true;
   // private bool _isLongJumping = false;
@@ -13,9 +16,10 @@ public class SamusController : MonoBehaviour {
   private bool _jumpInertiaStopped = false;
 
   // Object components
-  private Rigidbody2D _rigidbody;
-  private SamusState _samusState;
-  private SamusInput _samusInput;
+  private Rigidbody2D   _rigidbody;
+  private BoxCollider2D _boxCollider;
+  private SamusState    _samusState;
+  private SamusInput    _samusInput;
 
   // Useful consts
   private int _terrainLayer;
@@ -27,6 +31,7 @@ public class SamusController : MonoBehaviour {
   private List<ContactPoint2D> _holdingContactPoints = new List<ContactPoint2D>();
 
   private void Awake() {
+    // Scripts
     _samusState = GetComponent<SamusState>();
     if (_samusState == null) {
       Debug.LogError("SamusState Script not found!");
@@ -39,9 +44,16 @@ public class SamusController : MonoBehaviour {
       return;
     }
 
+    // Collision
     _rigidbody = GetComponent<Rigidbody2D>();
     if (_rigidbody == null) {
       Debug.LogError("Samus Rigidbody2D not found!");
+      return;
+    }
+
+    _boxCollider = GetComponent<BoxCollider2D>();
+    if (_boxCollider == null) {
+      Debug.LogError("Samus BoxCollider2D not found!");
       return;
     }
 
@@ -60,11 +72,13 @@ public class SamusController : MonoBehaviour {
   private void OnEnable() {
     _samusInput.longJumpPressed.OnChange += longJumpInputChanged;
     _samusState.jumpState.OnChange += jumpStateChanged;
+    _samusState.isMorphball.OnChange += toggleMorphballCollider;
   }
 
   private void OnDisable() {
     _samusInput.longJumpPressed.OnChange -= longJumpInputChanged;
     _samusState.jumpState.OnChange -= jumpStateChanged;
+    _samusState.isMorphball.OnChange -= toggleMorphballCollider;
   }
 
   private void Update() {
@@ -184,5 +198,26 @@ public class SamusController : MonoBehaviour {
       _rigidbody.velocity = Vector2.zero;
       _jumpInertiaStopped = true;
     }
+  }
+
+  // Morphball
+  private void toggleMorphballCollider(bool isMorphball) {
+    _holdingVector2.Set(_boxCollider.offset.x, _boxCollider.offset.y + (isMorphball? -0.5f : 0.5f));
+    _boxCollider.offset = _holdingVector2;
+
+    _holdingVector2.Set(_boxCollider.size.x, _boxCollider.size.y + (isMorphball? -1 : 1));
+    _boxCollider.size = _holdingVector2;
+    if(!isMorphball) {
+      doMorphballHop();
+    }
+
+
+  }
+
+  public void doMorphballHop() {
+    // Hop on transition
+    _holdingVector3.Set(transform.position.x, transform.position.y + (_samusState.isMorphball.value? toMorphballHop : fromMorphballHop), transform.position.z);
+
+    transform.position = _holdingVector3;
   }
 }

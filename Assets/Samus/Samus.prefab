@@ -322,6 +322,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5.25
   jumpHeight: 14.5
+  toMorphballHop: 0.5
+  fromMorphballHop: 0.3125
 --- !u!114 &8734788131067168126
 MonoBehaviour:
   m_ObjectHideFlags: 0
