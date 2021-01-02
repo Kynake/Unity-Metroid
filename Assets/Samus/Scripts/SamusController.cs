@@ -69,13 +69,15 @@ public class SamusController : MonoBehaviour {
     _samusState.isMorphball.OnChange -= toggleMorphballCollider;
   }
 
-  private void Update() {
-
+  private void FixedUpdate() {
     // Move Sideways
     if(_samusState.isRunning.value) {
-      _holdingVector3.Set((_samusState.isForward.value? 1 : -1) * movementSpeed * Time.deltaTime, 0, 0);
-      transform.position += _holdingVector3;
+      _holdingVector2.Set((_samusState.isForward.value? 1 : -1) * movementSpeed * Time.deltaTime, 0);
+      _rigidbody.position += _holdingVector2;
     }
+  }
+
+  private void Update() {
 
     if(_rigidbody.velocity.y != 0 && _samusState.jumpState.value == JumpState.Grounded) {
       _samusState.jumpState.value = JumpState.Falling;
