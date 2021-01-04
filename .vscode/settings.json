@@ -21,6 +21,7 @@
     },
 
     "files.associations": {
+        "*.asset": "yaml",
         "*.meta": "yaml"
     }
 }
