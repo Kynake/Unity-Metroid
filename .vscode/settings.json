@@ -1,7 +1,6 @@
-﻿
+
 {
-    "files.exclude":
-    {
+    "files.exclude": {
         "**/.DS_Store":true,
         "**/.git":true,
         "**/*.booproj":true,
@@ -19,5 +18,9 @@
         "Obj/":true,
         "temp/":true,
         "Temp/":true
+    },
+
+    "files.associations": {
+        "*.meta": "yaml"
     }
-} 
+}
