@@ -21,6 +21,7 @@
     },
 
     "files.associations": {
+        "*.anim": "yaml",
         "*.asset": "yaml",
         "*.meta": "yaml",
         "*.unity": "yaml"
