@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -79,6 +79,10 @@ public class SamusInput : MonoBehaviour {
   }
 
   public void OnExitMorphball(InputValue value) {
+    // Only exit morphball when grounded
+    if(_samusState.jumpState.value != JumpState.Grounded || _samusState.isRunning.value) {
+      return;
+    }
     _playerInput.SwitchCurrentActionMap(_defaultActionMap);
     _samusState.isMorphball.value = false;
   }
