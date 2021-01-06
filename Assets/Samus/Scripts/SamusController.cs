@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SamusController : MonoBehaviour {
+  private struct BoxColliderVectors {
+    public Vector2 offset;
+    public Vector2 size;
+  }
 
   public float movementSpeed; // in tiles per second
   public float jumpHeight;
@@ -17,6 +21,9 @@ public class SamusController : MonoBehaviour {
   // private bool _isLongJumping = false;
   // private bool _isShortJumping = false;
   private bool _jumpInertiaStopped = false;
+  private bool _canExitMorphball = false;
+  private BoxColliderVectors _tallBox;
+  private BoxColliderVectors _shortBox;
 
   // Object components
   private Rigidbody2D   _rigidbody;
@@ -57,6 +64,18 @@ public class SamusController : MonoBehaviour {
     }
   }
 
+  private void Start() {
+    // Initialize structs
+    _tallBox.offset = _boxCollider.offset;
+    _tallBox.size = _boxCollider.size;
+
+    _holdingVector2.Set(_boxCollider.offset.x, _boxCollider.offset.y - 0.5f);
+    _shortBox.offset = _holdingVector2;
+
+    _holdingVector2.Set(_boxCollider.size.x, _boxCollider.size.y - 1);
+    _shortBox.size = _holdingVector2;
+  }
+
   private void OnEnable() {
     _samusInput.longJumpPressed.OnChange += longJumpInputChanged;
     _samusState.jumpState.OnChange += jumpStateChanged;
@@ -74,6 +93,10 @@ public class SamusController : MonoBehaviour {
     if(_samusState.isRunning.value) {
       _holdingVector2.Set((_samusState.isForward.value? 1 : -1) * movementSpeed * Time.deltaTime, 0);
       _rigidbody.position += _holdingVector2;
+    }
+
+    if(_samusState.isMorphball.value) {
+      _canExitMorphball = !Utils.checkTopCollision(_boxCollider, 1, terrainLayer);
     }
   }
 
@@ -194,11 +217,8 @@ public class SamusController : MonoBehaviour {
 
   // Morphball
   private void toggleMorphballCollider(bool isMorphball) {
-    _holdingVector2.Set(_boxCollider.offset.x, _boxCollider.offset.y + (isMorphball? -0.5f : 0.5f));
-    _boxCollider.offset = _holdingVector2;
-
-    _holdingVector2.Set(_boxCollider.size.x, _boxCollider.size.y + (isMorphball? -1 : 1));
-    _boxCollider.size = _holdingVector2;
+    _boxCollider.offset = isMorphball? _shortBox.offset : _tallBox.offset;
+    _boxCollider.size = isMorphball? _shortBox.size : _tallBox.size;
     if(!isMorphball) {
       doMorphballHop();
     }
@@ -209,5 +229,19 @@ public class SamusController : MonoBehaviour {
     _holdingVector3.Set(transform.position.x, transform.position.y + (_samusState.isMorphball.value? toMorphballHop : fromMorphballHop), transform.position.z);
 
     transform.position = _holdingVector3;
+  }
+
+  public bool canSwitchMorphballMode() {
+    // Only change morphball state when grounded and standing still
+    if(_samusState.jumpState.value != JumpState.Grounded || _samusState.isRunning.value) {
+      return false;
+    }
+
+    // Do not exit if theres not enough space above
+    if(_samusState.isMorphball.value && !_canExitMorphball) {
+      return false;
+    }
+
+    return true;
   }
 }

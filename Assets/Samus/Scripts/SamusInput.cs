@@ -21,6 +21,7 @@ public class SamusInput : MonoBehaviour {
   // Object Components
   private PlayerInput _playerInput;
   private SamusState _samusState;
+  private SamusController _samusController;
 
   // Useful consts
   private const string _defaultActionMap = "Samus Default Controls";
@@ -39,6 +40,12 @@ public class SamusInput : MonoBehaviour {
     _samusState = GetComponent<SamusState>();
     if(_samusState == null) {
       Debug.LogError("SamusState Script not found!");
+      return;
+    }
+
+    _samusController = GetComponent<SamusController>();
+    if(_samusController == null) {
+      Debug.LogError("SamusController Script not found!");
       return;
     }
   }
@@ -70,19 +77,19 @@ public class SamusInput : MonoBehaviour {
   }
 
   public void OnEnterMorphball(InputValue value) {
-    // Only enter morphball when grounded
-    if(_samusState.jumpState.value != JumpState.Grounded || _samusState.isRunning.value) {
+    if(!_samusController.canSwitchMorphballMode()) {
       return;
     }
+
     _playerInput.SwitchCurrentActionMap(_morphballActionMap);
     _samusState.isMorphball.value = true;
   }
 
   public void OnExitMorphball(InputValue value) {
-    // Only exit morphball when grounded
-    if(_samusState.jumpState.value != JumpState.Grounded || _samusState.isRunning.value) {
+    if(!_samusController.canSwitchMorphballMode()) {
       return;
     }
+
     _playerInput.SwitchCurrentActionMap(_defaultActionMap);
     _samusState.isMorphball.value = false;
   }

@@ -23,30 +23,24 @@ public static class Utils {
     }
   }
 
-  public enum SideCollision {
-    None  = 0b0000,
-    Up   = 0b0001,
-    Down  = 0b0010,
-    Left  = 0b0100,
-    Right = 0b1000,
-    Walls = Left | Right,
-    All   = Up | Down | Walls
+  public static bool checkTopCollision(Collider2D collider, float distance, LayerMask layer) => checkCollision(collider, Vector2.up, distance, getTopCollisionFilter(layer));
+
+  private static  RaycastHit2D[] _holdingRaycast = new RaycastHit2D[10];
+  private static bool checkCollision(Collider2D collider, Vector2 direction, float distance, ContactFilter2D filter) {
+    if(collider != null) {
+      return collider.Cast(direction, filter, _holdingRaycast, distance, true) > 0;
+    }
+
+    return false;
   }
 
-  public static SideCollision boxCheckCollision(BoxCollider2D collider, float margin, LayerMask layerMask) {
-    var registeredCollisions = SideCollision.None;
-    // Up
-    registeredCollisions |= Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0, Vector2.up, margin, layerMask).collider == null? SideCollision.None : SideCollision.Up;
+  private static ContactFilter2D _holdingFilter = new ContactFilter2D() {};
+  private static ContactFilter2D getTopCollisionFilter(LayerMask layer) {
+    const float topCollisionAngle = -90;
 
-    // Down
-    registeredCollisions |= Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0, Vector2.down, margin, layerMask).collider == null? SideCollision.None : SideCollision.Down;
+    _holdingFilter.SetLayerMask(layer);
+    _holdingFilter.SetNormalAngle(topCollisionAngle - 1, topCollisionAngle + 1);
 
-    // Left
-    registeredCollisions |= Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0, Vector2.left, margin, layerMask).collider == null? SideCollision.None : SideCollision.Left;
-
-    // Right
-    registeredCollisions |= Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0, Vector2.right, margin, layerMask).collider == null? SideCollision.None : SideCollision.Right;
-
-    return registeredCollisions;
+    return _holdingFilter;
   }
 }
