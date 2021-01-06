@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -107,6 +107,7 @@ public class SamusInput : MonoBehaviour {
   // Shoot
   public void OnNormalShoot(InputValue value) {
     normalShootPressed.value = value.isPressed;
+    _samusState.isShooting.value = value.isPressed;
   }
 
   public void OnFastShoot(InputValue value) {
