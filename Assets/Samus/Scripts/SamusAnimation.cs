@@ -46,6 +46,7 @@ public class SamusAnimation : MonoBehaviour {
     _samusState.jumpState.OnChange -= updateAnimatorJumpState;
   }
 
+  // Update Animator Functions
   private void updateAnimatorRunning(bool value) {
     animator.SetBool("isRunning", value);
   }

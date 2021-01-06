@@ -22,6 +22,7 @@ public class SamusInput : MonoBehaviour {
   private PlayerInput _playerInput;
   private SamusState _samusState;
   private SamusController _samusController;
+  private SamusWeapons _samusWeapons;
 
   // Useful consts
   private const string _defaultActionMap = "Samus Default Controls";
@@ -46,6 +47,12 @@ public class SamusInput : MonoBehaviour {
     _samusController = GetComponent<SamusController>();
     if(_samusController == null) {
       Debug.LogError("SamusController Script not found!");
+      return;
+    }
+
+    _samusWeapons = GetComponent<SamusWeapons>();
+    if(_samusWeapons == null) {
+      Debug.LogError("SamusWeapons Script not found!");
       return;
     }
   }
@@ -95,7 +102,7 @@ public class SamusInput : MonoBehaviour {
   }
 
   public void OnSwitchWeapon(InputValue value) {
-    print("OnOnSwitchWeaponun");
+    _samusWeapons.switchWeapon();
   }
 
   public void OnPauseGame(InputValue value) {
