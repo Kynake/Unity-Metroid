@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6472410141437556216}
   - component: {fileID: 8051380131762123559}
   m_Layer: 9
-  m_Name: Zoomer
+  m_Name: Zoomer_Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,11 +147,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveLeft: 0
   walkSpeed: 3
-  extraTurnFloat: 0.4375
+  healh: 2
+  damage: 8
   terrainLayer:
     serializedVersion: 2
     m_Bits: 1024
-  TimeScaleTemp: 0
 --- !u!95 &8051380131762123559
 Animator:
   serializedVersion: 3

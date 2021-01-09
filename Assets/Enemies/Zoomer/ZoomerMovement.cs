@@ -6,6 +6,10 @@ public class ZoomerMovement : MonoBehaviour {
   public bool moveLeft;
   public float walkSpeed;
   // public LayerMask samusLayer;
+
+  public int healh;
+  public int damage;
+
   public LayerMask terrainLayer;
   // public int damagePerHit;
 
