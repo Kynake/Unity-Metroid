@@ -322,12 +322,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5.25
-  jumpHeight: 14.5
-  toMorphballHop: 0.5
-  fromMorphballHop: 0.3125
+  health: 50
   terrainLayer:
     serializedVersion: 2
     m_Bits: 1024
+  jumpHeight: 14.5
+  toMorphballHop: 0.5
+  fromMorphballHop: 0.3125
   enemiesLayer:
     serializedVersion: 2
     m_Bits: 512

@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PhysicsObject : MonoBehaviour {
+public class PhysicsObject : MonoBehaviour {
   protected Rigidbody2D _rigidbody;
   protected BoxCollider2D _boxCollider;
 
   // Holding Vars
-  protected Vector2 _holdingVector2;
-  protected Vector3 _holdingVector3;
+  protected Vector2 _holdingVector2 = Vector2.zero;
+  protected Vector3 _holdingVector3 = Vector3.zero;
 
   // Physics constants
   protected const int _collisionBufferSize = 10;
 
-  protected void Start() {
+  protected void Awake() {
     _rigidbody   = GetComponent<Rigidbody2D>();
     _boxCollider = GetComponent<BoxCollider2D>();
 

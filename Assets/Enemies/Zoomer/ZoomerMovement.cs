@@ -12,8 +12,7 @@ public class ZoomerMovement : Enemy {
   private const float collisionMargin = 0.05f;
 
   // Holding vars
-  private new void Start() {
-    base.Start();
+  private void Start() {
     _moveDirection = moveLeft? Vector2.left : Vector2.right;
   }
 

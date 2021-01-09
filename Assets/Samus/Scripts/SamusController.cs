@@ -2,19 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SamusController : MonoBehaviour {
+public class SamusController : Entity {
   private struct BoxColliderVectors {
     public Vector2 offset;
     public Vector2 size;
   }
 
-  public float movementSpeed; // in tiles per second
   public float jumpHeight;
 
   public float toMorphballHop; // in tiles
   public float fromMorphballHop; // in tiles
 
-  public LayerMask terrainLayer;
   public LayerMask enemiesLayer;
 
   private bool _canLongJumpAgain = true;
@@ -26,17 +24,15 @@ public class SamusController : MonoBehaviour {
   private BoxColliderVectors _shortBox;
 
   // Object components
-  private Rigidbody2D   _rigidbody;
-  private BoxCollider2D _boxCollider;
-  private SamusState    _samusState;
-  private SamusInput    _samusInput;
+  private SamusState _samusState;
+  private SamusInput _samusInput;
 
   // Holding vars
-  private Vector2 _holdingVector2 = Vector2.zero;
-  private Vector3 _holdingVector3 = Vector3.zero;
   private List<ContactPoint2D> _holdingContactPoints = new List<ContactPoint2D>();
 
-  private void Awake() {
+  private new void Awake() {
+    base.Awake();
+
     // Scripts
     _samusState = GetComponent<SamusState>();
     if (_samusState == null) {
@@ -49,22 +45,10 @@ public class SamusController : MonoBehaviour {
       Debug.LogError("SamusInput Script not found!");
       return;
     }
-
-    // Collision
-    _rigidbody = GetComponent<Rigidbody2D>();
-    if (_rigidbody == null) {
-      Debug.LogError("Samus Rigidbody2D not found!");
-      return;
-    }
-
-    _boxCollider = GetComponent<BoxCollider2D>();
-    if (_boxCollider == null) {
-      Debug.LogError("Samus BoxCollider2D not found!");
-      return;
-    }
   }
 
   private void Start() {
+
     // Initialize structs
     _tallBox.offset = _boxCollider.offset;
     _tallBox.size = _boxCollider.size;
