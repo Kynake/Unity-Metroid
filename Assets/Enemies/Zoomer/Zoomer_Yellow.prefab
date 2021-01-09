@@ -145,13 +145,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 127e7fc2ba91b5f4b9b1b0d9d34fa242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveLeft: 0
-  walkSpeed: 3
-  healh: 2
-  damage: 8
+  movementSpeed: 3
+  health: 2
+  damageOnTouch: 8
   terrainLayer:
     serializedVersion: 2
     m_Bits: 1024
+  moveLeft: 0
 --- !u!95 &8051380131762123559
 Animator:
   serializedVersion: 3
