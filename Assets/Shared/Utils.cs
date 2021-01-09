@@ -7,7 +7,6 @@ public static class Utils {
     public WatchedValue(T startingValue) {
       _value = startingValue;
     }
-    private System.Type type = typeof(T); // Store type to diferentiate between primitives/enums and objects
 
     private T _value;
     public delegate void valueChangeAction(T value);
