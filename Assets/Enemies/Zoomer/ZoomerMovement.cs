@@ -48,8 +48,6 @@ public class ZoomerMovement : Enemy {
     Debug.DrawRay((Vector2) _boxCollider.bounds.center, transform.TransformDirection(_moveDirection) * (_boxCollider.bounds.extents.x + collisionMargin), Color.green);
     #endif
 
-    // var movementRay = Physics2D.BoxCast(_boxCollider.bounds.center, _boxCollider.bounds.extents, 0, transform.TransformDirection(_moveDirection), _boxCollider.bounds.extents.x + collisionMargin, ter);
-
     var shouldRotate = false;
 
     var movementRayBottom = Physics2D.Raycast((Vector2) _boxCollider.bounds.center, transform.TransformDirection(_moveDirection), _boxCollider.bounds.extents.x + collisionMargin, terrainLayer);
