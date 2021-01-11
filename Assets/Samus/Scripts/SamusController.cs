@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SamusController : Entity {
+public class SamusController : LivingEntity {
   private struct BoxColliderVectors {
     public Vector2 offset;
     public Vector2 size;
