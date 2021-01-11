@@ -54,6 +54,11 @@ public class ZoomerMovement : Enemy {
   }
 
   private void OnCollisionExit2D(Collision2D other) {
+    // Only look at terrain collisions
+    if(((1 << other.gameObject.layer) & terrainLayer) == 0) {
+      return;
+    }
+    
     transform.Rotate(0, 0, moveLeft? rotationAngle : -rotationAngle, Space.Self);
   }
 }
