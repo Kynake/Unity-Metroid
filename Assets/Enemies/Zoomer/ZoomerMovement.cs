@@ -10,6 +10,7 @@ public class ZoomerMovement : Enemy {
 
   private const float rotationAngle = 90f;
   private const float collisionMargin = 0.05f;
+  private const float collisionOffset = 0.0625f;
 
   // Holding vars
   private void Start() {
@@ -44,11 +45,29 @@ public class ZoomerMovement : Enemy {
 
   private void detectInnerRotation() {
     #if UNITY_EDITOR
-    Debug.DrawRay(_boxCollider.bounds.center, transform.TransformDirection(_moveDirection) * (_boxCollider.bounds.extents.x + collisionMargin), Color.green);
+    Debug.DrawRay((Vector2) _boxCollider.bounds.center, transform.TransformDirection(_moveDirection) * (_boxCollider.bounds.extents.x + collisionMargin), Color.green);
     #endif
 
-    var movementRay = Physics2D.Raycast(_boxCollider.bounds.center, transform.TransformDirection(_moveDirection), _boxCollider.bounds.extents.x + collisionMargin, terrainLayer);
-    if(movementRay.collider != null) { // Should rotate
+    // var movementRay = Physics2D.BoxCast(_boxCollider.bounds.center, _boxCollider.bounds.extents, 0, transform.TransformDirection(_moveDirection), _boxCollider.bounds.extents.x + collisionMargin, ter);
+
+    var shouldRotate = false;
+
+    var movementRayBottom = Physics2D.Raycast((Vector2) _boxCollider.bounds.center, transform.TransformDirection(_moveDirection), _boxCollider.bounds.extents.x + collisionMargin, terrainLayer);
+    shouldRotate = movementRayBottom.collider != null;
+    if(!shouldRotate) {
+      _holdingVector2.Set(0, collisionOffset);
+      _holdingVector2 = (Vector2) transform.TransformDirection(_holdingVector2);
+
+      #if UNITY_EDITOR
+      Debug.DrawRay((Vector2) _boxCollider.bounds.center + _holdingVector2, transform.TransformDirection(_moveDirection) * (_boxCollider.bounds.extents.x + collisionMargin), Color.green);
+      #endif
+
+      var movementRayTop = Physics2D.Raycast((Vector2) _boxCollider.bounds.center + _holdingVector2, transform.TransformDirection(_moveDirection), _boxCollider.bounds.extents.x + collisionMargin, terrainLayer);
+      shouldRotate = movementRayTop.collider != null;
+    }
+
+
+    if(shouldRotate) { // Should rotate
       transform.Rotate(0, 0, (moveLeft? -rotationAngle : rotationAngle), Space.Self);
     }
   }
@@ -58,7 +77,7 @@ public class ZoomerMovement : Enemy {
     if(((1 << other.gameObject.layer) & terrainLayer) == 0) {
       return;
     }
-    
+
     transform.Rotate(0, 0, moveLeft? rotationAngle : -rotationAngle, Space.Self);
   }
 }
