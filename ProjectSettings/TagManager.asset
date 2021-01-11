@@ -50,6 +50,9 @@ TagManager:
   - name: Player
     uniqueID: 1705543753
     locked: 0
+  - name: Projectiles
+    uniqueID: 2021416167
+    locked: 0
   - name: Foreground
     uniqueID: 1930170237
     locked: 0
