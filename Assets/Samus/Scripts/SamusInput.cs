@@ -7,7 +7,7 @@ public class SamusInput : MonoBehaviour {
   // Input Status vars
   public Utils.WatchedValue<int> runDirectionPressed = new Utils.WatchedValue<int>(0);
 
-  public Utils.WatchedValue<bool> aimPressed          = new Utils.WatchedValue<bool>(false);
+  public Utils.WatchedValue<bool> aimPressed = new Utils.WatchedValue<bool>(false);
 
   // Jump
   public Utils.WatchedValue<bool> longJumpPressed  = new Utils.WatchedValue<bool>(false);
