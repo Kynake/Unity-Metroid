@@ -7,18 +7,20 @@ public abstract class Entity : AnimatedObject {
   public int damageOnTouch; // in hits from the basic cannon
 
   public LayerMask terrainLayer;
+  public LayerMask samusLayer;
+  public LayerMask enemyLayer;
 
-  protected void OnCollisionEnter2D(Collision2D other) {
+  protected virtual void OnCollisionEnter2D(Collision2D other) => OnCollisionOrTrigger2D(other.collider);
+  protected virtual void OnTriggerEnter2D(Collider2D other) => OnCollisionOrTrigger2D(other);
+
+  private void OnCollisionOrTrigger2D(Collider2D other) {
     if(damageOnTouch == 0) {
       return;
     }
 
     var livingEntity = other.gameObject.GetComponent<LivingEntity>();
     if(livingEntity != null) {
-      livingEntity.health -= damageOnTouch;
-      if(livingEntity.health <= 0) {
-        livingEntity.die();
-      }
+      livingEntity.OnDamage(damageOnTouch);
     }
   }
 }

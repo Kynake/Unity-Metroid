@@ -6,10 +6,19 @@ public abstract class LivingEntity : Entity {
   public int health; // in hits from the basic cannon
 
   /**
-   * Default die function for Living Entities
-   * Override for custom behaviour
+   * Default take damage function for Living Entities
    */
-  public virtual void die() {
+  public virtual void OnDamage(int damage) {
+    health -= damage;
+    if(health <= 0) {
+      OnDie();
+    }
+  }
+
+  /**
+   * Default die function for Living Entities
+   */
+  public virtual void OnDie() {
     print($"{this.name} is Dead.");
   }
 }

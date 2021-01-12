@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Weapon Aim
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Samus
   - Enemies
   - Terrain
-  - 
+  - Projectiles
   - 
   - 
   - 
@@ -44,11 +45,11 @@ TagManager:
   - name: Background
     uniqueID: 2485511695
     locked: 0
-  - name: Enemies
-    uniqueID: 3122784783
-    locked: 0
   - name: Player
     uniqueID: 1705543753
+    locked: 0
+  - name: Enemies
+    uniqueID: 3122784783
     locked: 0
   - name: Projectiles
     uniqueID: 2021416167

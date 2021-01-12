@@ -14,15 +14,15 @@ public class PhysicsObject : MonoBehaviour {
   protected const int _collisionBufferSize = 10;
 
   protected void Awake() {
-    _rigidbody   = GetComponent<Rigidbody2D>();
-    _boxCollider = GetComponent<BoxCollider2D>();
+    _rigidbody   = GetComponentInChildren<Rigidbody2D>();
+    _boxCollider = GetComponentInChildren<BoxCollider2D>();
 
     if(_rigidbody == null) {
-      Debug.LogError($"Missing RigidBody2D in {this}");
+      Debug.LogError($"RigidBody2D not found in {this.name}");
     }
 
     if(_boxCollider == null) {
-      Debug.LogError($"Missing BoxCollider2D in {this}");
+      Debug.LogError($"BoxCollider2D not found in {this.name}");
     }
   }
 }

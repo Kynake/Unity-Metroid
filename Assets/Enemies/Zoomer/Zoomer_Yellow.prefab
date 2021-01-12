@@ -146,11 +146,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 3
-  health: 2
   damageOnTouch: 8
   terrainLayer:
     serializedVersion: 2
     m_Bits: 1024
+  samusLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  health: 2
   moveLeft: 0
 --- !u!95 &8051380131762123559
 Animator:

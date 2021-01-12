@@ -8,7 +8,7 @@ public class AnimatedObject : PhysicsObject {
 
   protected new void Awake() {
     base.Awake();
-    _animator = GetComponent<Animator>();
+    _animator = GetComponentInChildren<Animator>();
     if(_animator == null) {
       Debug.LogError($"Missing Animator in {this}");
     }
