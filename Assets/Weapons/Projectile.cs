@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Projectile : Entity {
-  [HideInInspector]
-  public Vector2 direction;
+
+  [HideInInspector] public Vector2 direction;
 
   protected virtual void Start() {
     direction.Normalize();
@@ -16,6 +16,11 @@ public abstract class Projectile : Entity {
 
   protected override void OnTriggerEnter2D(Collider2D other) {
     base.OnTriggerEnter2D(other);
+    _animator.SetBool("OnCollision", true);
+  }
+
+  protected virtual void OnDestroyProjectile() {
+    print("Explosion finished");
     Destroy(gameObject);
   }
 }
