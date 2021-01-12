@@ -24,6 +24,8 @@
         "*.anim": "yaml",
         "*.asset": "yaml",
         "*.meta": "yaml",
-        "*.unity": "yaml"
+        "*.unity": "yaml",
+        "*.controller": "yaml",
+        "*.inputactions": "json"
     }
 }
