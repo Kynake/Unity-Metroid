@@ -13,8 +13,6 @@ public class SamusController : LivingEntity {
   public float toMorphballHop; // in tiles
   public float fromMorphballHop; // in tiles
 
-  public LayerMask enemiesLayer;
-
   private bool _canLongJumpAgain = true;
   // private bool _isLongJumping = false;
   // private bool _isShortJumping = false;
