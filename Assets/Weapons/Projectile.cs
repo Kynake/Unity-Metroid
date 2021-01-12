@@ -12,8 +12,6 @@ public abstract class Projectile : Entity {
 
     var rotationAngle = Vector2.Angle(Vector2.right, direction);
     _boxCollider.gameObject.transform.Rotate(Vector3.forward, rotationAngle, Space.Self);
-
-    print($"dir: {direction}, angle: {rotationAngle}");
   }
 
   protected override void OnTriggerEnter2D(Collider2D other) {
