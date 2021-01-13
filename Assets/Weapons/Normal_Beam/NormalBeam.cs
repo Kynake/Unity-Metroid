@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NormalBeam : Projectile {
-  public float destroyTimeout; // in seconds
+  public float disableTimeout; // in seconds
 
-  protected override void Start() {
-    base.Start();
-    StartCoroutine(destroyInTime());
+  private Coroutine _disableCoroutine;
+
+  protected override void OnEnable() {
+    base.OnEnable();
+    _disableCoroutine = StartCoroutine(disableInTime());
+  }
+
+  protected override void OnDisable() {
+    StopCoroutine(_disableCoroutine);
+    base.OnDisable();
   }
 
   protected override void OnTriggerEnter2D(Collider2D other) {
@@ -19,8 +26,8 @@ public class NormalBeam : Projectile {
     base.OnTriggerEnter2D(other);
   }
 
-  IEnumerator destroyInTime() {
-    yield return new WaitForSeconds(destroyTimeout);
-    Destroy(gameObject);
+  private IEnumerator disableInTime() {
+    yield return new WaitForSeconds(disableTimeout);
+    gameObject.SetActive(false);
   }
 }

@@ -6,7 +6,9 @@ public abstract class Projectile : Entity {
 
   [HideInInspector] public Vector2 direction;
 
-  protected virtual void Start() {
+  protected virtual void OnEnable() {
+    _rigidbody.simulated = true;
+
     direction.Normalize();
     _rigidbody.velocity = direction * movementSpeed;
 
@@ -14,13 +16,18 @@ public abstract class Projectile : Entity {
     _boxCollider.gameObject.transform.Rotate(Vector3.forward, rotationAngle, Space.Self);
   }
 
+  protected virtual void OnDisable() {
+    _rigidbody.velocity = Vector2.zero;
+    direction = Vector2.right;
+  }
+
   protected override void OnTriggerEnter2D(Collider2D other) {
     base.OnTriggerEnter2D(other);
+    _rigidbody.simulated = false;
     _animator.SetBool("OnCollision", true);
   }
 
-  protected virtual void OnDestroyProjectile() {
-    print("Explosion finished");
-    Destroy(gameObject);
+  public virtual void OnDestroyProjectile() {
+    gameObject.SetActive(false);
   }
 }

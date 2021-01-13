@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SamusWeapons : MonoBehaviour {
-  public GameObject equippedWeapon;
+
+  [SerializeField] private GameObject _startingWeapon = null;
 
   [SerializeField] private GameObject _horizontalAim = null;
   [SerializeField] private GameObject _verticalAim = null;
 
   private SamusState _samusState;
+  private List<ObjectPool> _weaponsPools = new List<ObjectPool>();
+  private int _currentWeaponIndex = -1;
 
   private void Awake() {
     _samusState = GetComponent<SamusState>();
@@ -18,9 +21,14 @@ public class SamusWeapons : MonoBehaviour {
     }
   }
 
-  // private void Start() {
+  private void Start() {
+    if(_startingWeapon != null) {
+      var startingPool = new ObjectPool(_startingWeapon);
 
-  // }
+      _weaponsPools.Add(startingPool);
+      _currentWeaponIndex = 0;
+    }
+  }
 
   // private void Update() {
 
@@ -30,6 +38,11 @@ public class SamusWeapons : MonoBehaviour {
 
   // Called from within animation events
   public void shoot() {
+    if(_currentWeaponIndex == -1) {
+      print("No Weapons available");
+      return;
+    }
+
     Vector2 direction;
     Vector2 position;
 
@@ -41,12 +54,21 @@ public class SamusWeapons : MonoBehaviour {
       position = _horizontalAim.transform.position;
     }
 
-    var beam = Instantiate(equippedWeapon, position, Quaternion.identity);
+    var beam = _weaponsPools[_currentWeaponIndex].getPooledGameObject();
+    beam.transform.position = position;
+
     var beamScript = beam.GetComponent<Projectile>();
     beamScript.direction = direction;
+
+    beam.SetActive(true);
   }
 
   public void switchWeapon() {
-    print("Weapon Switch");
+    if(_currentWeaponIndex == -1) {
+      return;
+    }
+    
+    // Get next weapon circularly from list
+    _currentWeaponIndex  = (_currentWeaponIndex + 1) % _weaponsPools.Count;
   }
 }

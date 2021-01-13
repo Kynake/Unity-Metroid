@@ -150,7 +150,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   direction: {x: 0, y: 0}
-  destroyTimeout: 0.23
+  disableTimeout: 0.22
 --- !u!1 &7068445125614317375
 GameObject:
   m_ObjectHideFlags: 0
