@@ -7,13 +7,16 @@ public abstract class LivingEntity : Entity {
 
   /**
    * Default take damage function for Living Entities
+   * Returns true if the Entity has died as a result of this attack
    */
-  public virtual void OnDamage(int damage) {
+  public virtual bool OnDamage(int damage) {
     print($"{this.name} took {damage} points of damage.");
     health -= damage;
     if(health <= 0) {
       OnDie();
     }
+
+    return health <= 0;
   }
 
   /**

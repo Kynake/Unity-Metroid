@@ -398,6 +398,9 @@ MonoBehaviour:
   jumpHeight: 14.5
   toMorphballHop: 0.5
   fromMorphballHop: 0.3125
+  enemyDamageLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!114 &8734788131067168126
 MonoBehaviour:
   m_ObjectHideFlags: 0

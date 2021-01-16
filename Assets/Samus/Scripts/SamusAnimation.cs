@@ -7,10 +7,12 @@ public class SamusAnimation : AnimatedObject {
     Base = 0, Stand = Base,
     Aim = 1,
     Shoot = 2,
-    Aim_Shoot = 3
+    Aim_Shoot = 3,
+    Invulnerable = 4
   }
 
   private SamusState _samusState;
+  private bool _isFlickering = false;
 
   private new void Awake() {
     base.Awake();
@@ -22,19 +24,21 @@ public class SamusAnimation : AnimatedObject {
   }
 
   private void OnEnable() {
-    _samusState.isRunning.OnChange   += updateAnimatorRunning;
-    _samusState.isAiming.OnChange    += updateAnimatorAiming;
-    _samusState.isShooting.OnChange  += updateAnimatorShooting;
-    _samusState.isMorphball.OnChange += updateAnimatorMorphball;
+    _samusState.isRunning.OnChange      += updateAnimatorRunning;
+    _samusState.isAiming.OnChange       += updateAnimatorAiming;
+    _samusState.isShooting.OnChange     += updateAnimatorShooting;
+    _samusState.isMorphball.OnChange    += updateAnimatorMorphball;
+    _samusState.isInvulnerable.OnChange += updateAnimatorInvulnerable;
 
     _samusState.jumpState.OnChange += updateAnimatorJumpState;
   }
 
   private void OnDisable() {
-    _samusState.isRunning.OnChange   -= updateAnimatorRunning;
-    _samusState.isAiming.OnChange    -= updateAnimatorAiming;
-    _samusState.isShooting.OnChange  -= updateAnimatorShooting;
-    _samusState.isMorphball.OnChange -= updateAnimatorMorphball;
+    _samusState.isRunning.OnChange      -= updateAnimatorRunning;
+    _samusState.isAiming.OnChange       -= updateAnimatorAiming;
+    _samusState.isShooting.OnChange     -= updateAnimatorShooting;
+    _samusState.isMorphball.OnChange    -= updateAnimatorMorphball;
+    _samusState.isInvulnerable.OnChange -= updateAnimatorInvulnerable;
 
     _samusState.jumpState.OnChange -= updateAnimatorJumpState;
   }
@@ -77,5 +81,26 @@ public class SamusAnimation : AnimatedObject {
         _animator.SetBool("isJumping", false);
         break;
     }
+  }
+
+  private void updateAnimatorInvulnerable(bool value) {
+    _animator.SetBool("isInvulnerable", value);
+    _animator.SetLayerWeight((int) Layers.Invulnerable, value? 1f : 0f);
+  }
+
+  // Unity doesn't allow for aniomations events to functions that take in bools,
+  // so this event reads back tha value from the animator
+  private void animationEventUpdateInvunerable() {
+    if(_isFlickering) {
+      return;
+    }
+    _isFlickering = true;
+    StartCoroutine(removeInvulnerability());
+  }
+
+  private IEnumerator removeInvulnerability() {
+    yield return new WaitForSeconds(_animator.GetCurrentAnimatorStateInfo((int) Layers.Invulnerable).length);
+    _isFlickering = false;
+    _samusState.isInvulnerable.value = false;
   }
 }

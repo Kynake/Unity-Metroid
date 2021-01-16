@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +12,8 @@ public class SamusController : LivingEntity {
 
   public float toMorphballHop; // in tiles
   public float fromMorphballHop; // in tiles
+
+  public LayerMask enemyDamageLayer;
 
   private bool _canLongJumpAgain = true;
   // private bool _isLongJumping = false;
@@ -62,12 +64,14 @@ public class SamusController : LivingEntity {
     _samusInput.longJumpPressed.OnChange += longJumpInputChanged;
     _samusState.jumpState.OnChange += jumpStateChanged;
     _samusState.isMorphball.OnChange += toggleMorphballCollider;
+    _samusState.isInvulnerable.OnChange += ToggleInvulnerability;
   }
 
   private void OnDisable() {
     _samusInput.longJumpPressed.OnChange -= longJumpInputChanged;
     _samusState.jumpState.OnChange -= jumpStateChanged;
     _samusState.isMorphball.OnChange -= toggleMorphballCollider;
+    _samusState.isInvulnerable.OnChange -= ToggleInvulnerability;
   }
 
   private void FixedUpdate() {
@@ -225,5 +229,23 @@ public class SamusController : LivingEntity {
     }
 
     return true;
+  }
+
+  // Damage Related
+  public override bool OnDamage(int damage) {
+    if(base.OnDamage(damage)) {
+      return true;
+    }
+
+    // Make Invulnerable
+    _samusState.isInvulnerable.value = true;
+
+    // Recoil samus away from source of damage
+
+    return false;
+  }
+
+  private void ToggleInvulnerability(bool isInvulnerable) {
+    Physics2D.IgnoreLayerCollision(samusLayer.toLayer(), enemyDamageLayer.toLayer(), isInvulnerable);
   }
 }
