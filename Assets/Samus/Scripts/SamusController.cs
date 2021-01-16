@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -110,14 +110,14 @@ public class SamusController : LivingEntity {
 
   // private void OnCollisionEnter2D(Collision2D other) {
   //   // Ignore terrain here
-  //   if(((1 << other.gameObject.layer) & terrainLayer) != 0) {
+  //   if((other.gameObject.layer.toLayerMask() & terrainLayer) != 0) {
   //     return;
   //   }
   // }
 
   private void OnCollisionStay2D(Collision2D other) {
     // Only look at terrain collisions
-    if(((1 << other.gameObject.layer) & terrainLayer) == 0) {
+    if((other.gameObject.layer.toLayerMask() & terrainLayer) == 0) {
       return;
     }
 
@@ -138,7 +138,7 @@ public class SamusController : LivingEntity {
 
   private void OnCollisionExit2D(Collision2D other) {
     // Only look at terrain collisions
-    if(((1 << other.gameObject.layer) & terrainLayer) == 0) {
+    if((other.gameObject.layer.toLayerMask() & terrainLayer) == 0) {
       return;
     }
 
