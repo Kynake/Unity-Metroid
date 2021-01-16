@@ -13,6 +13,8 @@ public class SamusWeapons : MonoBehaviour {
   private List<ObjectPool> _weaponsPools = new List<ObjectPool>();
   private int _currentWeaponIndex = -1;
 
+  private Coroutine _nextShotScheduled = null;
+
   private void Awake() {
     _samusState = GetComponent<SamusState>();
     if (_samusState == null) {
@@ -55,19 +57,36 @@ public class SamusWeapons : MonoBehaviour {
     }
 
     var beam = _weaponsPools[_currentWeaponIndex].getPooledGameObject();
-    beam.transform.position = position;
+    if(beam == null) {
+      print("No available objects in Projectile pool");
+    }
 
-    var beamScript = beam.GetComponent<Projectile>();
-    beamScript.direction = direction;
+    // Do not start multiple attempts to shoot, let FixedUpdate timer limit the frequency
+    if(_nextShotScheduled == null) {
+      _nextShotScheduled = StartCoroutine(scheduleNextShot(beam, position, direction));
+    }
+  }
 
-    beam.SetActive(true);
+  private IEnumerator scheduleNextShot(GameObject nextShotObject, Vector2 shotStartLocation, Vector2 shotDirection) {
+    // Prevent shot frequency variation by executing them on a fixed timer (that of FixedUpdate)
+    yield return new WaitForFixedUpdate();
+
+    nextShotObject.transform.position = shotStartLocation;
+
+    var beamScript = nextShotObject.GetComponent<Projectile>();
+    beamScript.direction = shotDirection;
+
+    nextShotObject.SetActive(true);
+
+    // Allow further shots
+    _nextShotScheduled = null;
   }
 
   public void switchWeapon() {
     if(_currentWeaponIndex == -1) {
       return;
     }
-    
+
     // Get next weapon circularly from list
     _currentWeaponIndex  = (_currentWeaponIndex + 1) % _weaponsPools.Count;
   }
