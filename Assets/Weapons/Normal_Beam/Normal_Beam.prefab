@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7570348478073926364}
   - component: {fileID: -6515235804822923808}
   - component: {fileID: 4830762226083325589}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Normal_Beam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   damageOnTouch: 1
   terrainLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 2048
   samusLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -161,7 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5161659249848993549}
   - component: {fileID: 5790484869949031188}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: Hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

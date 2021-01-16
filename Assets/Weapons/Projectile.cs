@@ -8,12 +8,13 @@ public abstract class Projectile : Entity {
 
   protected virtual void OnEnable() {
     _rigidbody.simulated = true;
+    _sprites.ForEach(sprite => sprite.enabled = true);
 
     direction.Normalize();
     _rigidbody.velocity = direction * movementSpeed;
 
     var rotationAngle = Vector2.Angle(Vector2.right, direction);
-    _boxCollider.gameObject.transform.Rotate(Vector3.forward, rotationAngle, Space.Self);
+    _boxTrigger.gameObject.transform.Rotate(Vector3.forward, rotationAngle, Space.Self);
   }
 
   protected virtual void OnDisable() {
@@ -29,5 +30,6 @@ public abstract class Projectile : Entity {
 
   public virtual void OnDestroyProjectile() {
     gameObject.SetActive(false);
+    _boxTrigger.transform.rotation = Quaternion.identity;
   }
 }

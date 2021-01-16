@@ -15,10 +15,10 @@ TagManager:
   - 
   - 
   - Samus
-  - Enemies
+  - Enemy
+  - EnemyDamage
   - Terrain
-  - Projectiles
-  - 
+  - Projectile
   - 
   - 
   - 

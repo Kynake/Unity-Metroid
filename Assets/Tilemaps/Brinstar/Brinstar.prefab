@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3833642060353029565}
   - component: {fileID: 4352158528368028033}
-  m_Layer: 31
+  m_Layer: 11
   m_Name: Brinstar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 874167112586577535}
   - component: {fileID: 3188535085614424528}
   - component: {fileID: 5339274115086839814}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Layer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,9 @@ public class NormalBeam : Projectile {
   }
 
   protected override void OnDisable() {
-    StopCoroutine(_disableCoroutine);
+    if(_disableCoroutine != null) {
+      StopCoroutine(_disableCoroutine);
+    }
     base.OnDisable();
   }
 
@@ -28,6 +30,6 @@ public class NormalBeam : Projectile {
 
   private IEnumerator disableInTime() {
     yield return new WaitForSeconds(disableTimeout);
-    gameObject.SetActive(false);
+    OnDestroyProjectile();
   }
 }

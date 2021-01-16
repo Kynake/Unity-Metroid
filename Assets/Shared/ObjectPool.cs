@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class ObjectPool {
   private List<GameObject> _pool;
+  public const int defaultPoolSize = 10;
 
   // Constructor
-  public ObjectPool(GameObject original, int poolSize = 5) {
+  public ObjectPool(GameObject original, int poolSize = defaultPoolSize) {
     _pool = new List<GameObject>(poolSize);
 
     GameObject tmp;

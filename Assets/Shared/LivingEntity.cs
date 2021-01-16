@@ -9,6 +9,7 @@ public abstract class LivingEntity : Entity {
    * Default take damage function for Living Entities
    */
   public virtual void OnDamage(int damage) {
+    print($"{this.name} took {damage} points of damage.");
     health -= damage;
     if(health <= 0) {
       OnDie();
