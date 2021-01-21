@@ -13,7 +13,7 @@ public abstract class LivingEntity : Entity {
     print($"{this.name} took {damage} points of damage from {damageSource.name}.");
     health -= damage;
     if(health <= 0) {
-      OnDie();
+      OnDeath();
     }
 
     return health <= 0;
@@ -22,7 +22,7 @@ public abstract class LivingEntity : Entity {
   /**
    * Default die function for Living Entities
    */
-  public virtual void OnDie() {
+  public virtual void OnDeath() {
     print($"{this.name} is Dead.");
   }
 }
