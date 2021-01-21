@@ -20,7 +20,7 @@ public abstract class Entity : AnimatedObject {
 
     var livingEntity = other.gameObject.GetComponent<LivingEntity>();
     if(livingEntity != null) {
-      livingEntity.OnDamage(damageOnTouch);
+      livingEntity.OnDamage(damageOnTouch, gameObject);
     }
   }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,9 @@ public class SamusController : LivingEntity {
 
   public float toMorphballHop; // in tiles
   public float fromMorphballHop; // in tiles
+
+  public GameObject recoilTargetLocation;
+  public float recoilStrength;
 
   public LayerMask enemyDamageLayer;
 
@@ -147,7 +151,8 @@ public class SamusController : LivingEntity {
     }
 
     // If the collision was exited while Samus was grounded,
-    // then the player walked of the edge of a platform without jumping
+    // then the player walked of the edge of a platform without jumping,
+    // or was throw into the air by damage recoil
     if(_samusState.jumpState.value == JumpState.Grounded) {
       _samusState.jumpState.value = JumpState.Falling;
     }
@@ -232,8 +237,8 @@ public class SamusController : LivingEntity {
   }
 
   // Damage Related
-  public override bool OnDamage(int damage) {
-    if(base.OnDamage(damage)) {
+  public override bool OnDamage(int damage, GameObject damageSource) {
+    if(base.OnDamage(damage, damageSource)) {
       return true;
     }
 
@@ -241,8 +246,18 @@ public class SamusController : LivingEntity {
     _samusState.isInvulnerable.value = true;
 
     // Recoil samus away from source of damage
+    StartCoroutine(recoil(damageSource.transform.position));
 
     return false;
+  }
+
+  private IEnumerator recoil(Vector2 damageSourcePosition) {
+      yield return new WaitForFixedUpdate();
+
+      // Prevent recoil and jump impulses from happening at the same time
+      if(_samusState.jumpState.value != JumpState.Jumping) {
+        _rigidbody.AddForce((_rigidbody.position - damageSourcePosition) * recoilStrength, ForceMode2D.Impulse);
+      }
   }
 
   private void ToggleInvulnerability(bool isInvulnerable) {

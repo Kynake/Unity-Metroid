@@ -264,6 +264,7 @@ Transform:
   - {fileID: 3084552374710953174}
   - {fileID: 487020088801985113}
   - {fileID: 1196848148799313241}
+  - {fileID: 3001621616745669126}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -398,6 +399,8 @@ MonoBehaviour:
   jumpHeight: 14.5
   toMorphballHop: 0.5
   fromMorphballHop: 0.3125
+  recoilTargetLocation: {fileID: 7623203629554674261}
+  recoilStrength: 7
   enemyDamageLayer:
     serializedVersion: 2
     m_Bits: 1024
@@ -452,3 +455,33 @@ MonoBehaviour:
   _startingWeapon: {fileID: 4834819711038668288, guid: a36332e7b50807745b216612b993341a, type: 3}
   _horizontalAim: {fileID: 2445849314586246704}
   _verticalAim: {fileID: 2093094203340765341}
+--- !u!1 &7623203629554674261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3001621616745669126}
+  m_Layer: 0
+  m_Name: Recoil Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3001621616745669126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7623203629554674261}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8641140733747106449}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

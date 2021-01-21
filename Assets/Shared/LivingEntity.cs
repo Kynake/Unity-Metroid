@@ -9,8 +9,8 @@ public abstract class LivingEntity : Entity {
    * Default take damage function for Living Entities
    * Returns true if the Entity has died as a result of this attack
    */
-  public virtual bool OnDamage(int damage) {
-    print($"{this.name} took {damage} points of damage.");
+  public virtual bool OnDamage(int damage, GameObject damageSource) {
+    print($"{this.name} took {damage} points of damage from {damageSource.name}.");
     health -= damage;
     if(health <= 0) {
       OnDie();
