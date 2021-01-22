@@ -197,6 +197,9 @@ TextureImporter:
   - first:
       213: 3517850412602204838
     second: Minus
+  - first:
+      213: 205775904936002785
+    second: Copyleft
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1622,7 +1625,7 @@ TextureImporter:
       name: Question_Mark
       rect:
         serializedVersion: 2
-        x: 111
+        x: 121
         y: 1
         width: 8
         height: 8
@@ -1643,7 +1646,7 @@ TextureImporter:
       name: Minus
       rect:
         serializedVersion: 2
-        x: 121
+        x: 131
         y: 1
         width: 8
         height: 8
@@ -1656,6 +1659,27 @@ TextureImporter:
       bones: []
       spriteID: 6a2ad18df4ae1d030800000000000000
       internalID: 3517850412602204838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Copyleft
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e48b0568101bd200800000000000000
+      internalID: 205775904936002785
       vertices: []
       indices: 
       edges: []
