@@ -100,7 +100,7 @@ TextureImporter:
     second: Lowercase_f
   - first:
       213: -2202027314284539224
-    second: Lowercase_q
+    second: Lowercase_g
   - first:
       213: -4181934007273176061
     second: Lowercase_h
@@ -130,7 +130,7 @@ TextureImporter:
     second: Lowercase_p
   - first:
       213: 2669857374001028298
-    second: Characters_Spritesheet_42
+    second: Lowercase_q
   - first:
       213: 2337028652314259065
     second: Lowercase_r
@@ -175,7 +175,7 @@ TextureImporter:
     second: Number_4
   - first:
       213: 1462939694392365972
-    second: CharNumber_5
+    second: Number_5
   - first:
       213: 8700924487709238587
     second: Number_6
@@ -971,7 +971,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lowercase_q
+      name: Lowercase_g
       rect:
         serializedVersion: 2
         x: 61
@@ -1181,7 +1181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characters_Spritesheet_42
+      name: Lowercase_q
       rect:
         serializedVersion: 2
         x: 161
@@ -1496,7 +1496,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CharNumber_5
+      name: Number_5
       rect:
         serializedVersion: 2
         x: 51
@@ -1672,7 +1672,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
