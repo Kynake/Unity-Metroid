@@ -253,6 +253,8 @@ public class SamusController : LivingEntity {
   private IEnumerator recoil(Vector2 damageSourcePosition) {
       yield return new WaitForFixedUpdate();
 
+      // TODO: rework recoil, implement better prevention
+
       // Prevent recoil and jump impulses from happening at the same time
       if(_samusState.jumpState.value != JumpState.Jumping) {
         _rigidbody.AddForce((_rigidbody.position - damageSourcePosition) * recoilStrength, ForceMode2D.Impulse);
