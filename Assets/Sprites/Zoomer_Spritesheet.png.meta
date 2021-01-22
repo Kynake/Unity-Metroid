@@ -10,7 +10,7 @@ TextureImporter:
     second: Zoomer_Sprite_Red
   - first:
       213: 8577525726506579908
-    second: Zoomer_Spritesheet_2
+    second: Zoomer_Sprite_Hurt
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -114,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 19
+        y: 37
         width: 16
         height: 16
       alignment: 9
@@ -139,7 +139,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 1
+        y: 19
         width: 16
         height: 16
       alignment: 9
@@ -155,6 +155,27 @@ TextureImporter:
       bones: []
       spriteID: c8e9a83774c2e9e30800000000000000
       internalID: 4512092562064580236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zoomer_Sprite_Hurt
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7f23cd33e790770800000000000000
+      internalID: 8577525726506579908
       vertices: []
       indices: 
       edges: []
