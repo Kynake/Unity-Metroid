@@ -58,7 +58,7 @@ public class SamusWeapons : MonoBehaviour {
 
     var beam = _weaponsPools[_currentWeaponIndex].getPooledGameObject();
     if(beam == null) {
-      print("No available objects in Projectile pool");
+      Debug.LogError("No available objects in Projectile pool");
       return;
     }
 
