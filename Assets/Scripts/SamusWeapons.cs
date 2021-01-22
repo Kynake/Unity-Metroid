@@ -59,6 +59,7 @@ public class SamusWeapons : MonoBehaviour {
     var beam = _weaponsPools[_currentWeaponIndex].getPooledGameObject();
     if(beam == null) {
       print("No available objects in Projectile pool");
+      return;
     }
 
     // Do not start multiple attempts to shoot, let FixedUpdate timer limit the frequency
