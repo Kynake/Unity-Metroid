@@ -17,7 +17,9 @@ public class GameController : MonoBehaviour {
   public static void spawnExplosion(Vector2 position) {
     var explosion = _explosionPool.getPooledGameObject();
     if(explosion == null) {
-      Debug.LogError("No available objects in Explosion pool");
+      #if UNITY_EDITOR
+      Debug.LogWarning("No available objects in Explosion pool");
+      #endif
       return;
     }
 

@@ -398,7 +398,6 @@ MonoBehaviour:
   jumpHeight: 14.5
   toMorphballHop: 0.5
   fromMorphballHop: 0.3125
-  recoilTargetLocation: {fileID: 0}
   recoilStrength: 7
   enemyDamageLayer:
     serializedVersion: 2
@@ -452,5 +451,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingWeapon: {fileID: 4834819711038668288, guid: a36332e7b50807745b216612b993341a, type: 3}
+  _maximumSimultaneousShots: 5
   _horizontalAim: {fileID: 2445849314586246704}
   _verticalAim: {fileID: 2093094203340765341}

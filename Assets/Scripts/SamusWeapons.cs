@@ -5,6 +5,7 @@ using UnityEngine;
 public class SamusWeapons : MonoBehaviour {
 
   [SerializeField] private GameObject _startingWeapon = null;
+  public int _maximumSimultaneousShots;
 
   [SerializeField] private GameObject _horizontalAim = null;
   [SerializeField] private GameObject _verticalAim = null;
@@ -25,7 +26,7 @@ public class SamusWeapons : MonoBehaviour {
 
   private void Start() {
     if(_startingWeapon != null) {
-      var startingPool = new ObjectPool(_startingWeapon);
+      var startingPool = new ObjectPool(_startingWeapon, _maximumSimultaneousShots);
 
       _weaponsPools.Add(startingPool);
       _currentWeaponIndex = 0;
@@ -58,7 +59,9 @@ public class SamusWeapons : MonoBehaviour {
 
     var beam = _weaponsPools[_currentWeaponIndex].getPooledGameObject();
     if(beam == null) {
-      Debug.LogError("No available objects in Projectile pool");
+      #if UNITY_EDITOR
+      Debug.LogWarning("No available objects in Projectile pool");
+      #endif
       return;
     }
 
