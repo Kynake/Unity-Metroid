@@ -13,11 +13,16 @@ public class ZoomerMovement : Enemy {
   private const float collisionOffset = 0.0625f;
 
   // Holding vars
-  private void Start() {
+  protected override void Start() {
+    base.Start();
     _moveDirection = moveLeft? Vector2.left : Vector2.right;
   }
 
   private void FixedUpdate() {
+    if(_isHurt) { // Ignore movement if in the proccess of getting hurt
+      return;
+    }
+
     if(stickToGroundSurface()) {
      move();
      detectRotation();
