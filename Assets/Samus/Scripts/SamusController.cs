@@ -14,7 +14,6 @@ public class SamusController : LivingEntity {
   public float toMorphballHop; // in tiles
   public float fromMorphballHop; // in tiles
 
-  public GameObject recoilTargetLocation;
   public float recoilStrength;
 
   public LayerMask enemyDamageLayer;
