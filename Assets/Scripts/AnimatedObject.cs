@@ -2,23 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimatedObject : PhysicsObject {
+public interface IAnimatedObject {
+  void AwakeAnimatedObject(GameObject gameObject, out Animator animator, out List<SpriteRenderer> sprites);
+}
 
-  protected Animator _animator;
-  protected List<SpriteRenderer> _sprites = new List<SpriteRenderer>();
-
-  protected new void Awake() {
-    base.Awake();
-    _animator = GetComponentInChildren<Animator>();
-    if(_animator == null) {
-      Debug.LogError($"Missing Animator in {this}");
+public class AnimatedObject : IAnimatedObject {
+  public void AwakeAnimatedObject(GameObject gameObject, out Animator animator, out List<SpriteRenderer> sprites) {
+    animator = gameObject.GetComponentInChildren<Animator>();
+    if(animator == null) {
+      Debug.LogError($"Missing Animator in {gameObject}");
     }
 
-    GetComponentsInChildren<SpriteRenderer>(_sprites);
-    if(_sprites.Count == 0) {
-      Debug.LogError($"No Sprites found in {this.name}");
+    sprites = new List<SpriteRenderer>();
+    gameObject.GetComponentsInChildren<SpriteRenderer>(sprites);
+    if(sprites.Count == 0) {
+      Debug.LogError($"No Sprites found in {gameObject.name}");
     }
 
-    _animator.keepAnimatorControllerStateOnDisable = false;
+    animator.keepAnimatorControllerStateOnDisable = false;
   }
 }

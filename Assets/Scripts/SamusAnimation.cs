@@ -2,7 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SamusAnimation : AnimatedObject {
+public class SamusAnimation : MonoBehaviour, IAnimatedObject {
+  // Composition components
+  private AnimatedObject _animatedObject = new AnimatedObject();
+
+  // Composition Attributes
+  protected Animator _animator;
+  protected List<SpriteRenderer> _sprites;
+
   private enum Layers { // Corresponds to the layers in 'Assets/Samus/Animations/Samus Animation Controller'
     Base = 0, Stand = Base,
     Aim = 1,
@@ -14,13 +21,18 @@ public class SamusAnimation : AnimatedObject {
   private SamusState _samusState;
   private bool _isFlickering = false;
 
-  private new void Awake() {
-    base.Awake();
+  private void Awake() {
+    AwakeAnimatedObject(gameObject, out _animator, out _sprites);
+
     _samusState = GetComponent<SamusState>();
     if (_samusState == null) {
       Debug.LogError("SamusState Script not found!");
       return;
     }
+  }
+
+  public void AwakeAnimatedObject(GameObject gameObject, out Animator animator, out List<SpriteRenderer> sprites) {
+    _animatedObject.AwakeAnimatedObject(gameObject, out animator, out sprites);
   }
 
   private void OnEnable() {
