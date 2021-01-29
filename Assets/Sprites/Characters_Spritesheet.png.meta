@@ -200,6 +200,15 @@ TextureImporter:
   - first:
       213: 205775904936002785
     second: Copyleft
+  - first:
+      213: 2103357538406252321
+    second: HUD_E
+  - first:
+      213: -2231703296412279833
+    second: HUD_N
+  - first:
+      213: -470691826172081240
+    second: HUD_Dots
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1680,6 +1689,69 @@ TextureImporter:
       bones: []
       spriteID: 1e48b0568101bd200800000000000000
       internalID: 205775904936002785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_E
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f38508980a03d10800000000000000
+      internalID: 2103357538406252321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_N
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb174d0da56701e0800000000000000
+      internalID: -2231703296412279833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Dots
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab45562744c779f0800000000000000
+      internalID: -470691826172081240
       vertices: []
       indices: 
       edges: []
