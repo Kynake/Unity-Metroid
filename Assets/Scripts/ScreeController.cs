@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ScreeController : Enemy {
@@ -25,6 +26,7 @@ public class ScreeController : Enemy {
   private bool _targetReached = false;
   private bool _groundReached = false;
   private float _lerpAmount = 0;
+  private List<ContactPoint2D> _currentContactPoints = new List<ContactPoint2D>(_collisionBufferSize);
 
   private static ObjectPool _projectilePool = null;
   private const int _projectilePoolSize = 10;
@@ -41,6 +43,7 @@ public class ScreeController : Enemy {
   private void FixedUpdate() {
     if(_groundReached) {
       StartCoroutine(launchProjectiles());
+      return;
     }
     if(_enemyFound == null) {
       isIdling();
@@ -99,8 +102,14 @@ public class ScreeController : Enemy {
   protected override void OnCollisionEnter2D(Collision2D other) {
     print(other.gameObject.name);
     if((other.gameObject.layer.toLayerMask() & terrainLayer) != 0) {
-      _targetReached = true;
-      _groundReached = true;
+      other.GetContacts(_currentContactPoints);
+      var floorContact = _currentContactPoints.Exists(contact => contact.normal.roundToInt().y > 0);
+
+      if(floorContact) {
+        _targetReached = true;
+        _groundReached = true;
+        _rigidbody.velocity = Vector2.zero;
+      }
     }
   }
 

@@ -25,4 +25,11 @@ public static class Extensions {
   public static LayerMask toLayerMask(this int layer) {
     return (LayerMask) 1 << layer;
   }
+
+  public static Vector3 roundToInt(this Vector3 vec) {
+    vec.Set(Mathf.Round(vec.x), Mathf.Round(vec.y), Mathf.Round(vec.z));
+    return vec;
+  }
+
+  public static Vector2 roundToInt(this Vector2 vec) => ((Vector3) vec).roundToInt();
 }
