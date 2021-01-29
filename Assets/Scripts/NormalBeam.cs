@@ -3,20 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NormalBeam : Projectile {
-  public float disableTimeout; // in seconds
 
-  private Coroutine _disableCoroutine;
 
   protected override void OnEnable() {
     base.OnEnable();
-    _disableCoroutine = StartCoroutine(disableInTime());
-  }
 
-  protected override void OnDisable() {
-    if(_disableCoroutine != null) {
-      StopCoroutine(_disableCoroutine);
-    }
-    base.OnDisable();
+    var rotationAngle = Vector2.Angle(Vector2.right, direction);
+    _boxTrigger.gameObject.transform.Rotate(Vector3.forward, rotationAngle, Space.Self);
+
   }
 
   protected override void OnTriggerEnter2D(Collider2D other) {
@@ -26,10 +20,5 @@ public class NormalBeam : Projectile {
     }
 
     base.OnTriggerEnter2D(other);
-  }
-
-  private IEnumerator disableInTime() {
-    yield return new WaitForSeconds(disableTimeout);
-    OnDestroyProjectile();
   }
 }
