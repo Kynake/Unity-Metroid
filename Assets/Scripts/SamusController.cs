@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SamusController : LivingEntity {
   private struct BoxColliderVectors {
@@ -248,6 +249,9 @@ public class SamusController : LivingEntity {
   // Damage Related
   public override bool OnDamage(int damage, GameObject damageSource) {
     if(base.OnDamage(damage, damageSource)) {
+      // Placeholder Gameover TODO: implement gameover animations
+      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
       return true;
     }
 
