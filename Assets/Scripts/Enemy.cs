@@ -22,6 +22,7 @@ public abstract class Enemy : LivingEntity {
       return true;
     }
     _isHurt = true;
+    // TODO: Disable physics while hurt
 
     return false;
   }
