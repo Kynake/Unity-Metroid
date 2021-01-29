@@ -11,6 +11,7 @@ public class SamusWeapons : MonoBehaviour {
   [SerializeField] private GameObject _verticalAim = null;
 
   private SamusState _samusState;
+  private SamusAudio _samusAudio;
   private List<ObjectPool> _weaponsPools = new List<ObjectPool>();
   private int _currentWeaponIndex = -1;
 
@@ -20,6 +21,12 @@ public class SamusWeapons : MonoBehaviour {
     _samusState = GetComponent<SamusState>();
     if (_samusState == null) {
       Debug.LogError("SamusState Script not found!");
+      return;
+    }
+
+    _samusAudio = GetComponent<SamusAudio>();
+    if (_samusAudio == null) {
+      Debug.LogError("SamusAudio Script not found!");
       return;
     }
   }
@@ -32,10 +39,6 @@ public class SamusWeapons : MonoBehaviour {
       _currentWeaponIndex = 0;
     }
   }
-
-  // private void Update() {
-
-  // }
 
   // Event functions
 
@@ -64,6 +67,8 @@ public class SamusWeapons : MonoBehaviour {
       #endif
       return;
     }
+
+    _samusAudio.playShoot();
 
     // Do not start multiple attempts to shoot, let FixedUpdate timer limit the frequency
     if(_nextShotScheduled == null) {

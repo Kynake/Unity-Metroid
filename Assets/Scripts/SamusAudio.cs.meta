@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: db7d32df450eda84d897117d83265586
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - jump: {fileID: 8300000, guid: aee1d969c2c3e244bb1f9c38ea10025a, type: 3}
+  - shoot: {fileID: 8300000, guid: 25d4db0c3f1c8834ab4e0ac91a7dacc1, type: 3}
+  - hurt: {fileID: 8300000, guid: 99a339a18a0fdb04e93d94a18c705573, type: 3}
+  - morph: {fileID: 8300000, guid: 4ae53cf38f5cd57469339074d64740dc, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

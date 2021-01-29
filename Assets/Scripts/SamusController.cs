@@ -30,6 +30,7 @@ public class SamusController : LivingEntity {
   // Object components
   private SamusState _samusState;
   private SamusInput _samusInput;
+  private SamusAudio _samusAudio;
 
   // Holding vars
   private List<ContactPoint2D> _holdingContactPoints = new List<ContactPoint2D>();
@@ -47,6 +48,12 @@ public class SamusController : LivingEntity {
     _samusInput = GetComponent<SamusInput>();
     if (_samusInput == null) {
       Debug.LogError("SamusInput Script not found!");
+      return;
+    }
+
+    _samusAudio = GetComponent<SamusAudio>();
+    if (_samusAudio == null) {
+      Debug.LogError("SamusAudio Script not found!");
       return;
     }
   }
@@ -165,6 +172,8 @@ public class SamusController : LivingEntity {
     _holdingVector2.Set(0, jumpHeight);
     _rigidbody.AddForce(_holdingVector2, ForceMode2D.Impulse);
 
+    _samusAudio.playJump();
+
     _samusState.jumpState.value = JumpState.Jumping;
   }
 
@@ -241,6 +250,8 @@ public class SamusController : LivingEntity {
     if(base.OnDamage(damage, damageSource)) {
       return true;
     }
+
+    _samusAudio.playHurt();
 
     // Make Invulnerable
     _samusState.isInvulnerable.value = true;
