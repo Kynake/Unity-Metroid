@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Scree_Idle
+  m_Name: Scree_Chasing
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -30,17 +30,8 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.25
+        time: 0.083333336
         value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.38333333
-        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -58,9 +49,9 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -2777859917063924438, guid: 35e0978de76901841ac69d1b1add06b1, type: 3}
-    - time: 0.13333334
+    - time: 0.05
       value: {fileID: 6288858598386913060, guid: 35e0978de76901841ac69d1b1add06b1, type: 3}
-    - time: 0.36666667
+    - time: 0.1
       value: {fileID: 6288858598386913060, guid: 35e0978de76901841ac69d1b1add06b1, type: 3}
     attribute: m_Sprite
     path: 
@@ -96,7 +87,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.38333336
+    m_StopTime: 0.11666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -125,17 +116,8 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.25
+        time: 0.083333336
         value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 0.38333333
-        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103

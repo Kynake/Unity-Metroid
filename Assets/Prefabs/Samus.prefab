@@ -399,6 +399,7 @@ MonoBehaviour:
   toMorphballHop: 0.5
   fromMorphballHop: 0.3125
   recoilStrength: 7
+  maxRecoilHorizontalAngle: 50
   enemyDamageLayer:
     serializedVersion: 2
     m_Bits: 1024
