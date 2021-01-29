@@ -7,7 +7,20 @@ public class GameController : MonoBehaviour {
   private const int explosionPoolSize = 3;
   private static ObjectPool _explosionPool;
 
-  void Start() {
+  private static AudioSource _sharedAudioSource = null;
+
+  private void Awake() {
+
+    if(_sharedAudioSource == null) {
+      _sharedAudioSource = GetComponent<AudioSource>();
+      if(_sharedAudioSource == null) {
+        Debug.LogError($"No Audio Source found for {this.name}");
+        return;
+      }
+    }
+  }
+
+  private void Start() {
     // Initialize Static explosions pool
     if(explosionPrefab != null && _explosionPool == null) {
       _explosionPool = new ObjectPool(explosionPrefab, explosionPoolSize);
@@ -25,5 +38,11 @@ public class GameController : MonoBehaviour {
 
     explosion.transform.position = position;
     explosion.SetActive(true);
+  }
+
+  public static void playSound(AudioClip clip) {
+    if(clip != null) {
+      _sharedAudioSource.PlayOneShot(clip);
+    }
   }
 }
