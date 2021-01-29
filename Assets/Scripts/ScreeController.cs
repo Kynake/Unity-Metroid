@@ -40,6 +40,10 @@ public class ScreeController : Enemy {
   }
 
   private void FixedUpdate() {
+    if(_isHurt) { // Ignore movement if in the proccess of getting hurt
+      return;
+    }
+
     if(_groundReached) {
       StartCoroutine(launchProjectiles());
       return;
