@@ -19,10 +19,12 @@ public class SamusInput : MonoBehaviour {
 
 
   // Object Components
+  public GameController gameController;
   private PlayerInput _playerInput;
   private SamusState _samusState;
   private SamusController _samusController;
   private SamusWeapons _samusWeapons;
+
 
   // Useful consts
   private const string _defaultActionMap = "Samus Default Controls";
@@ -59,6 +61,10 @@ public class SamusInput : MonoBehaviour {
 
   // Input Handling
   public void OnRun(InputValue value) {
+    if(Time.timeScale == 0) {
+      return;
+    }
+
     // Parse input
     float rawValue = value.Get<float>();
     int direction = 0;
@@ -79,11 +85,19 @@ public class SamusInput : MonoBehaviour {
   }
 
   public void OnAim(InputValue value) {
+    if(Time.timeScale == 0) {
+      return;
+    }
+
     aimPressed.value = value.isPressed;
     _samusState.isAiming.value = value.isPressed;
   }
 
   public void OnEnterMorphball(InputValue value) {
+    if(Time.timeScale == 0) {
+      return;
+    }
+
     if(!_samusController.canSwitchMorphballMode()) {
       return;
     }
@@ -93,6 +107,10 @@ public class SamusInput : MonoBehaviour {
   }
 
   public void OnExitMorphball(InputValue value) {
+    if(Time.timeScale == 0) {
+      return;
+    }
+
     if(!_samusController.canSwitchMorphballMode()) {
       return;
     }
@@ -102,29 +120,50 @@ public class SamusInput : MonoBehaviour {
   }
 
   public void OnSwitchWeapon(InputValue value) {
+    if(Time.timeScale == 0) {
+      return;
+    }
+
     _samusWeapons.switchWeapon();
   }
 
   public void OnPauseGame(InputValue value) {
     print("OnPauseGame");
+    GameController.pauseGame();
   }
 
   // Jump
   public void OnLongJump(InputValue value) {
+    if(Time.timeScale == 0) {
+      return;
+    }
+
     longJumpPressed.value = value.isPressed;
   }
 
   public void OnShortJump(InputValue value) {
+    if(Time.timeScale == 0) {
+      return;
+    }
+
     shortJumpPressed.value = value.isPressed;
   }
 
   // Shoot
   public void OnNormalShoot(InputValue value) {
+    if(Time.timeScale == 0) {
+      return;
+    }
+
     normalShootPressed.value = value.isPressed;
     _samusState.isShooting.value = value.isPressed;
   }
 
   public void OnFastShoot(InputValue value) {
+    if(Time.timeScale == 0) {
+      return;
+    }
+
     fastShootPressed.value = value.isPressed;
   }
 }

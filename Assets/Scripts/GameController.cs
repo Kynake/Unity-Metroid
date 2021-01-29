@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour {
   public GameObject explosionPrefab;
+  public GameObject mainCamera;
+  public AudioClip pauseSFX;
+
   private const int explosionPoolSize = 3;
   private static ObjectPool _explosionPool;
 
+  private static AudioClip _pauseSFX = null;
   private static AudioSource _sharedAudioSource = null;
+  private static AudioSource _mainAudioSource = null;
 
   private void Awake() {
 
@@ -15,6 +20,22 @@ public class GameController : MonoBehaviour {
       _sharedAudioSource = GetComponent<AudioSource>();
       if(_sharedAudioSource == null) {
         Debug.LogError($"No Audio Source found for {this.name}");
+        return;
+      }
+    }
+
+    if(_mainAudioSource == null) {
+      _mainAudioSource = mainCamera.GetComponent<AudioSource>();
+      if(_mainAudioSource == null) {
+        Debug.LogError($"No Main Audio Source found for {this.name}");
+        return;
+      }
+    }
+
+    if(_pauseSFX == null) {
+      _pauseSFX = pauseSFX;
+      if(_pauseSFX == null) {
+        Debug.LogError($"No Audio Clip found for pauseSFX");
         return;
       }
     }
@@ -44,5 +65,16 @@ public class GameController : MonoBehaviour {
     if(clip != null) {
       _sharedAudioSource.PlayOneShot(clip);
     }
+  }
+
+  public static void pauseGame() {
+    if(_mainAudioSource.isPlaying) {
+      _mainAudioSource.Pause();
+    } else {
+      _mainAudioSource.UnPause();
+    }
+
+    Time.timeScale = Time.timeScale == 0? 1 : 0;
+    _sharedAudioSource.PlayOneShot(_pauseSFX);
   }
 }
