@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+// TODO think of better way to do HUD
 public class HudController : MonoBehaviour {
   public Camera mainCamera;
   public Vector2 positionInCamera;
