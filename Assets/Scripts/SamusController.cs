@@ -15,6 +15,7 @@ public class SamusController : LivingEntity {
   public float fromMorphballHop; // in tiles
 
   public float recoilStrength;
+  public float maxRecoilHorizontalAngle;
 
   public LayerMask enemyDamageLayer;
 
@@ -256,8 +257,18 @@ public class SamusController : LivingEntity {
       // TODO: rework recoil, implement better prevention
 
       // Prevent recoil and jump impulses from happening at the same time
-      if(_samusState.jumpState.value != JumpState.Jumping) {
-        _rigidbody.AddForce((_rigidbody.position - damageSourcePosition) * recoilStrength, ForceMode2D.Impulse);
+      if(_samusState.jumpState.value == JumpState.Grounded) {
+
+        var direction = _rigidbody.position.x > damageSourcePosition.x? Vector2.right : Vector2.left;
+        var forceVector = ((_rigidbody.position - damageSourcePosition).normalized * recoilStrength);
+        if(Vector2.Angle(forceVector, direction) > maxRecoilHorizontalAngle) {
+          forceVector = direction * recoilStrength;
+        }
+
+        _rigidbody.AddForce(forceVector, ForceMode2D.Impulse);
+        #if UNITY_EDITOR
+          Debug.DrawLine(_rigidbody.transform.position, (Vector2) _rigidbody.transform.position + forceVector, Color.yellow, 1);
+        #endif
       }
   }
 
