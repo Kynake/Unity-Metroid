@@ -14,6 +14,15 @@ TextureImporter:
   - first:
       213: -6498840200615580151
     second: Scree_Hurt_Narrow
+  - first:
+      213: -1203963513444388611
+    second: Scree_Variant_Wide
+  - first:
+      213: 7060842995324046582
+    second: Scree_Variant_Narrow
+  - first:
+      213: -7912469212546653036
+    second: Scree_Projectile
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,11 +126,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1
-        y: 27
+        y: 53
         width: 16
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -138,11 +147,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 19
-        y: 27
+        y: 53
         width: 8
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,7 +172,7 @@ TextureImporter:
         width: 16
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,7 +193,7 @@ TextureImporter:
         width: 8
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,6 +201,69 @@ TextureImporter:
       bones: []
       spriteID: 90ea746154b7fc5a0800000000000000
       internalID: -6498840200615580151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scree_Variant_Wide
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 27
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0bd9a3099aa4fe0800000000000000
+      internalID: -1203963513444388611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scree_Variant_Narrow
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 27
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fc48175b472df160800000000000000
+      internalID: 7060842995324046582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Scree_Projectile
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 69
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49421f95c23413290800000000000000
+      internalID: -7912469212546653036
       vertices: []
       indices: 
       edges: []
