@@ -28,15 +28,14 @@ public class ScreeController : Enemy {
   private float _lerpAmount = 0;
   private List<ContactPoint2D> _currentContactPoints = new List<ContactPoint2D>(_collisionBufferSize);
 
-  private static ObjectPool _projectilePool = null;
+  // TODO find out why static here causes issues on level reload
+  private ObjectPool _projectilePool;
   private const int _projectilePoolSize = 10;
 
   private const float _raycastDistance = 30;
 
   protected override void Start() {
-    if(_projectilePool == null) {
-      _projectilePool = new ObjectPool(_projectilePrefab, _projectilePoolSize);
-    }
+    _projectilePool = new ObjectPool(_projectilePrefab, 4);
     base.Start();
   }
 
