@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -4094756004693908480
-    second: Zoomer_Sprite_Yellow
+    second: Zoomer_Sprite
   - first:
       213: 4512092562064580236
-    second: Zoomer_Sprite_Red
+    second: Zoomer_Sprite_Variant
   - first:
       213: 8577525726506579908
     second: Zoomer_Sprite_Hurt
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zoomer_Sprite_Yellow
+      name: Zoomer_Sprite
       rect:
         serializedVersion: 2
         x: 1
@@ -135,7 +135,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Zoomer_Sprite_Red
+      name: Zoomer_Sprite_Variant
       rect:
         serializedVersion: 2
         x: 1
