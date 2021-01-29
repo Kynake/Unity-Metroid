@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Projectile : Entity {
+public class Projectile : Entity {
 
   [HideInInspector] public Vector2 direction;
 

@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ScreeController : Enemy {
+
+  public float launchTimeout;
+  [SerializeField] private List<GameObject> _projectileTargets = null;
+  [SerializeField] private GameObject _projectilePrefab = null;
+
   [SerializeField] private GameObject _raycastLeft = null;
   [SerializeField] private GameObject _raycastRight = null;
 
@@ -21,12 +26,21 @@ public class ScreeController : Enemy {
   private bool _groundReached = false;
   private float _lerpAmount = 0;
 
+  private static ObjectPool _projectilePool = null;
+  private const int _projectilePoolSize = 10;
+
   private const float _raycastDistance = 30;
+
+  protected override void Start() {
+    if(_projectilePool == null) {
+      _projectilePool = new ObjectPool(_projectilePrefab, _projectilePoolSize);
+    }
+    base.Start();
+  }
 
   private void FixedUpdate() {
     if(_groundReached) {
-      // isExploding();
-      return;
+      StartCoroutine(launchProjectiles());
     }
     if(_enemyFound == null) {
       isIdling();
@@ -82,16 +96,11 @@ public class ScreeController : Enemy {
     }
   }
 
-  private void isExploding() {
-
-  }
-
   protected override void OnCollisionEnter2D(Collision2D other) {
     print(other.gameObject.name);
     if((other.gameObject.layer.toLayerMask() & terrainLayer) != 0) {
       _targetReached = true;
       _groundReached = true;
-      _enemyFound = null;
     }
   }
 
@@ -102,5 +111,26 @@ public class ScreeController : Enemy {
 
     var ray = Physics2D.Raycast(raycastReference.transform.position, transform.TransformDirection(Vector2.down), _raycastDistance, (samusLayer | terrainLayer));
     return ray.collider != null && (ray.collider.gameObject.layer.toLayerMask() & samusLayer) != 0? ray.collider.gameObject : null;
+  }
+
+  private IEnumerator launchProjectiles() {
+    yield return new WaitForSeconds(launchTimeout);
+    gameObject.SetActive(false);
+
+    #if UNITY_EDITOR
+    var available = _projectilePool.getAvailableAmount();
+    if(_projectileTargets.Count > available) {
+      Debug.LogWarning($"Not enough projectiles available in {this.name} Projectile Pool. Required: {_projectileTargets.Count}, Available: {available}");
+    }
+    #endif
+
+    _projectileTargets.ForEach(target => {
+      var projectile = _projectilePool.getPooledGameObject();
+      projectile.transform.position = transform.position;
+
+      var projectileScript = projectile.GetComponent<Projectile>();
+      projectileScript.direction = target.transform.localPosition;
+      projectile.SetActive(true);
+    });
   }
 }

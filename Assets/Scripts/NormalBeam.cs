@@ -15,7 +15,7 @@ public class NormalBeam : Projectile {
 
   protected override void OnTriggerEnter2D(Collider2D other) {
     // Ignore friendly fire collisions with Samus
-    if(((1 << other.gameObject.layer) & samusLayer) != 0) {
+    if((other.gameObject.layer.toLayerMask() & samusLayer) != 0) {
       return;
     }
 

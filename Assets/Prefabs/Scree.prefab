@@ -213,7 +213,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   health: 2
-  explosionTimeout: 0
+  launchTimeout: 1
+  _projectileTargets:
+  - {fileID: 8758018304828213143}
+  - {fileID: 2232586758665289442}
+  - {fileID: 650149587868768355}
+  - {fileID: 5636954930327946657}
+  _projectilePrefab: {fileID: 4908916644272859737, guid: 8c0d0a966ac33c7448badd56cee30d59, type: 3}
   _raycastLeft: {fileID: 6358116586924601509}
   _raycastRight: {fileID: 4888681638333046344}
 --- !u!1 &2232586758665289442
